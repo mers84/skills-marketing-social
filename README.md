@@ -21,7 +21,7 @@ perfil-intervencion      → hoja del perfil de la audiencia
         ↓
 estrategia-intervencion  → hoja de estrategia y brief
         ↓
-contenido-intervencion   → ideas, storyboard y plan de edición
+contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
 ```
 
 | Skill | Qué hace |

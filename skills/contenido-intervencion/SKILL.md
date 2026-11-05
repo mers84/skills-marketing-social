@@ -1,6 +1,6 @@
 ---
 name: contenido-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte el perfil y la estrategia de una campaña de marketing social en ideas de contenido, mensajes, eslóganes, un storyboard por planos y un plan de edición. Usar cuando se pida generar ideas de contenido, escribir mensajes o eslóganes de una causa, crear el guion o storyboard de un video corto, preparar qué grabar o editar un video con apoyo de IA.
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte el perfil y la estrategia de una campaña de marketing social en ideas de contenido, mensajes, eslóganes, un storyboard por planos y un plan de edición. Usar cuando se pida generar ideas de contenido, escribir mensajes o eslóganes de una causa, crear el guion o storyboard de un video corto, preparar qué grabar, crear una voz en off o editar un video con apoyo de IA.
 ---
 
 # Contenido de intervención
@@ -51,18 +51,19 @@ Para el video elegido, crea un plan plano a plano. Si hay un video de referencia
 
 - Escribe el **gancho de tres partes**: lo que se ve, lo que se dice y el texto en pantalla.
 - Agrega lo que hay que preparar antes de grabar y lo que no se debe hacer.
+- Si el video lleva voz en off, escribe el texto completo y comprueba que quepa en el tiempo. Sigue el método.
 
 Entrega siempre el texto de los planos. Después, resuelve los bocetos:
 
 1. **Comprueba si puedes generar imágenes** en este entorno. No lo supongas: si no lo sabes, intenta con un solo boceto.
-2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Con un no, sigue solo con el texto.
+2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Pide el formato en el prompt y comprueba cada imagen: si el video es vertical, el boceto debe ser más alto que ancho; si no lo es, rehazlo. Con un no, sigue solo con el texto.
 3. **Si no puedes,** dilo en una línea y sigue con el texto. Agrega en «Qué se ve» una descripción del boceto, por si el equipo quiere dibujarlo o crearlo en otra herramienta.
 
 La falta de imágenes nunca detiene el trabajo.
 
 ### 6. Prepara la edición
 
-Cuando el equipo tenga lo grabado, pide los archivos o una descripción y su transcripción. Entrega un plan de edición para hacerlo en CapCut u otro editor:
+Cuando el equipo tenga lo grabado, pide los archivos o una descripción y su transcripción. Entrega un plan de edición para hacerlo en CapCut u otro editor. Si hay voz en off, indica en la columna «Audio» qué tramo va en cada corte:
 
 | Corte | Tiempo | Qué clip | Texto en pantalla | Subtítulos | Movimiento | Audio |
 |---|---|---|---|---|---|---|

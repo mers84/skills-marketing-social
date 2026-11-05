@@ -100,6 +100,17 @@ Son puntos de partida, no reglas: la duración depende de lo que haya que contar
 
 Un video sencillo y creíble puede funcionar mejor que uno muy producido. La prueba con la audiencia es la que decide.
 
+## Voz en off
+
+Criterio de la cátedra. Sirve para narrar una historia sobre imágenes, cuando no conviene que alguien hable a cámara.
+
+1. Escribe el texto como se dice en voz alta, con frases cortas. Como referencia, unas 2,5 palabras por segundo: 30 segundos son unas 75 palabras. Léelo con un reloj en la mano.
+2. Genera la voz. Se puede hacer con ElevenLabs, con Deepgram o con el texto a voz del editor, como CapCut. Comprueba el costo, la licencia y si hay voces en español: estas condiciones cambian.
+3. Escúchala completa y corrige pronunciación y pausas.
+4. Llévala al editor y monta los planos sobre esa pista.
+
+No imites la voz de una persona real. Una voz generada no se presenta como el testimonio de alguien.
+
 ## Desarmar una referencia
 
 *Adaptado de `video` y `edit-anatomy`, de marketingskills.*
