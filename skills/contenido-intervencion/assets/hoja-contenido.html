@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoja de contenido</title>
+<style>
+:root{--bg:#f6f5f1;--paper:#fff;--ink:#1d2023;--muted:#585d62;--accent:#f3c613;--accent-soft:#fbf0b8;--line:#d9d7cf}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.45 Verdana,Arial,sans-serif}
+.sheet{max-width:1320px;margin:auto;background:var(--ink);border:3px solid var(--ink);display:grid;gap:3px}
+.head{color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 12px 11px}
+.head b{display:block;font-size:21px}.head span{font-size:13px}
+.cell{background:var(--paper);padding:14px 15px;display:grid;gap:9px;min-width:0}
+.cell.key{background:var(--accent-soft)}
+h2{margin:0;font-size:16px}
+p{margin:0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--bg);font-size:13px}
+.frames{display:grid;gap:10px}
+.frame{display:grid;grid-template-columns:190px 120px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:10px;border:1px solid var(--line);padding:10px}
+.frame.sin-boceto{grid-template-columns:120px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)}
+.frame b{display:block;font-size:12.5px;color:var(--muted)}
+.sketch{aspect-ratio:9/16;max-height:300px;width:100%;border:1px dashed var(--muted);display:grid;place-items:center;text-align:center;font-size:12px;color:var(--muted);padding:8px;overflow:hidden}
+.sketch img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.frame{grid-template-columns:minmax(0,1fr)}.sketch{max-width:190px}}
+@media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{padding:0;background:#fff}.sheet{max-width:none}.scroll{overflow:visible}}
+</style>
+</head>
+<body>
+<!-- La hoja crece con la información: no recortes datos. Sustituye los corchetes, repite filas y planos, y cita la fuente de cada idea. Sin bocetos: quita el recuadro .sketch y agrega la clase sin-boceto a cada .frame. -->
+<article class="sheet">
+  <header class="head"><div><b>Hoja de contenido · [Proyecto]</b><span>Audiencia prioritaria: [audiencia]</span></div><span>[Fecha]</span></header>
+  <section class="cell"><h2>Brief</h2><p><b>Qué queremos que haga:</b> [...] <b>Promesa:</b> [...] <b>Qué la respalda:</b> [...] <b>Aperturas:</b> [...] <b>No se puede afirmar:</b> [...]</p></section>
+  <section class="cell"><h2>Ángulos e ideas</h2><div class="scroll"><table><thead><tr><th>Ángulo y fuente</th><th>Formato</th><th>Mensaje</th><th>Eslogan</th><th>Idea visual</th><th>Llamado a actuar</th><th>Riesgo</th></tr></thead><tbody><tr><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td></tr></tbody></table></div></section>
+  <section class="cell key"><h2>Idea elegida</h2><p>[La idea que eligió el equipo y por qué]</p></section>
+  <section class="cell"><h2>Gancho</h2><p><b>Lo que se ve:</b> [...] <b>Lo que se dice:</b> [...] <b>Texto en pantalla:</b> [...]</p></section>
+  <section class="cell"><h2>Storyboard</h2><p><b>Antes de grabar:</b> [...]</p><div class="frames">
+    <div class="frame"><div class="sketch">[Boceto a lápiz, opcional]</div><div><b>Tiempo y plano</b>[0:00 a 0:03]<br>[Plano]</div><div><b>Qué se dice</b>[Texto literal]</div><div><b>Qué se ve</b>[Descripción]</div><div><b>Para qué</b>[Razón ligada a la estrategia]</div></div>
+  </div></section>
+  <section class="cell"><h2>Plan de edición</h2><div class="scroll"><table><thead><tr><th>Corte</th><th>Tiempo</th><th>Qué clip</th><th>Texto en pantalla</th><th>Subtítulos</th><th>Movimiento</th><th>Audio</th></tr></thead><tbody><tr><td>[1]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td><td>[...]</td></tr></tbody></table></div></section>
+  <section class="cell key"><h2>Antes de publicar</h2><p>[Lo que hay que comprobar, quién debe revisar y qué preguntarle a la audiencia]</p></section>
+</article>
+<script>
+/* La página del PDF toma el tamaño de la hoja, para que nunca se corte. */
+(function(){var r=document.querySelector('.sheet').getBoundingClientRect(),s=document.createElement('style');s.textContent='@page{size:'+Math.ceil(r.width+64)+'px '+Math.ceil(r.height+64)+'px;margin:8mm}';document.head.appendChild(s)})();
+</script>
+</body>
+</html>

@@ -21,14 +21,14 @@ perfil-intervencion      → hoja del perfil de la audiencia
         ↓
 estrategia-intervencion  → hoja de estrategia y brief
         ↓
-contenido-intervencion   → mensajes y guiones
+contenido-intervencion   → ideas, storyboard y plan de edición
 ```
 
 | Skill | Qué hace |
 |---|---|
 | [`perfil-intervencion`](skills/perfil-intervencion/SKILL.md) | Ordena los hallazgos: conducta, etapa de cambio, barreras, beneficios, motivadores, competencia e influyentes. Marca qué es evidencia, qué es supuesto y qué falta |
 | [`estrategia-intervencion`](skills/estrategia-intervencion/SKILL.md) | Propone posicionamientos y acciones por los cuatro frentes de la balanza, y las combina en una sola estrategia |
-| [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la estrategia en mensajes y guiones |
+| [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte el perfil y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 ## Cómo instalarlas
 
@@ -56,10 +56,10 @@ npx skills add mers84/skills-marketing-social
 ```text
 /perfil-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
 /estrategia-intervencion Usa el perfil de esta carpeta.
-/contenido-intervencion Usa la estrategia. Dame cinco mensajes y el guion de un video de 30 segundos.
+/contenido-intervencion Usa el perfil y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
 ```
 
-Los resultados quedan en `salidas/`. Las hojas de perfil y de estrategia salen en HTML y en PDF.
+Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.
 
 ## Límites
 
