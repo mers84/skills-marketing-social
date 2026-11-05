@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfil de intervención</title>
+<style>
+:root{--bg:#f6f5f1;--paper:#fff;--ink:#1d2023;--muted:#585d62;--accent:#f3c613;--accent-soft:#fbf0b8;--ev-bg:#dcefdf;--ev-fg:#1c5a2c;--su-bg:#fbeac4;--su-fg:#7a4d00;--fa-bg:#f8dcd8;--fa-fg:#8f2a1f}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.4 Verdana,Arial,sans-serif}
+.wrap{max-width:1180px;margin:auto;overflow-x:auto}
+.canvas{min-width:900px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-areas:"head head head head head" "bar com con ben mot" "bar sab con inf mot" "meta meta pasa pasa pasa";gap:3px;background:var(--ink);border:3px solid var(--ink)}
+.head{grid-area:head;color:#fff;display:flex;justify-content:space-between;gap:12px;padding:8px 12px 11px}
+.head b{display:block;font-size:20px}.head span{font-size:13px}
+.cell{background:var(--paper);padding:13px 14px;display:flex;flex-direction:column;gap:7px;min-width:0}
+h2{margin:0;font-size:16px;line-height:1.2}
+.def{margin:0;font-size:12.5px;color:var(--muted)}
+ul{margin:0;padding-left:17px;display:grid;gap:9px}
+.chip{display:inline-block;font-size:11px;font-weight:700;padding:3px 6px;white-space:nowrap}
+.ev{background:var(--ev-bg);color:var(--ev-fg)}.su{background:var(--su-bg);color:var(--su-fg)}.fa{background:var(--fa-bg);color:var(--fa-fg)}
+.bar{grid-area:bar}.com{grid-area:com}.sab{grid-area:sab}.ben{grid-area:ben}.inf{grid-area:inf}.mot{grid-area:mot}.meta{grid-area:meta}
+.pasa{grid-area:pasa;background:var(--accent-soft)}
+.con{grid-area:con;background:var(--accent)}
+.big{margin:0;font-size:17px;font-weight:700;line-height:1.25}
+.stage{margin-top:auto;border-top:2px solid var(--ink);padding-top:10px;display:grid;gap:6px}
+.stage p{margin:0}
+</style>
+</head>
+<body>
+<!-- Sustituye los textos entre corchetes. Cada viñeta lleva su fuente y su estado: ev (evidencia), su (supuesto) o fa (falta). -->
+<div class="wrap"><article class="canvas">
+  <header class="head"><div><b>Perfil de intervención · [Proyecto]</b><span>Audiencia prioritaria: [audiencia]</span></div><span>[Fecha]</span></header>
+  <section class="cell bar"><h2>Barreras</h2><p class="def">Por qué no lo hace, no querría o cree que no puede.</p><ul><li>[Barrera]. <small>[Fuente]</small> <span class="chip ev">Evidencia</span></li></ul></section>
+  <section class="cell com"><h2>Competencia</h2><p class="def">Lo que hace en vez de lo que le pedimos.</p><ul><li>[Conducta competidora]. <span class="chip ev">Evidencia</span></li></ul></section>
+  <section class="cell sab"><h2>Saber y creer</h2><p class="def">Lo que necesita saber o creer para actuar.</p><ul><li>[Dato o creencia]. <span class="chip su">Supuesto</span></li></ul></section>
+  <section class="cell con"><h2>Conducta que pedimos</h2><p class="big">[Quién + qué hace + dónde o cuándo]</p><span><span class="chip su">Por confirmar</span></span><div class="stage"><h2>Etapa de cambio</h2><p>[Etapa y su respaldo]</p></div></section>
+  <section class="cell ben"><h2>Beneficios</h2><p class="def">Lo que ella dice que gana. Los suyos, no los nuestros.</p><ul><li>[Beneficio]. <span class="chip fa">Falta</span></li></ul></section>
+  <section class="cell inf"><h2>Influyentes</h2><p class="def">A quién escucha, mira o admira en este tema.</p><ul><li>[Persona o grupo]. <span class="chip fa">Falta</span></li></ul></section>
+  <section class="cell mot"><h2>Motivadores</h2><p class="def">Lo que alguien podría decirle, mostrarle, darle o hacer por ella.</p><ul><li>[Motivador]. <span class="chip fa">Falta</span></li></ul></section>
+  <section class="cell meta"><h2>Meta</h2><p class="def">Cuántas personas harán la conducta y para cuándo.</p><ul><li>[Meta y punto de partida]. <span class="chip fa">Falta</span></li></ul></section>
+  <section class="cell pasa"><h2>Lo que pasa a la estrategia</h2><p style="margin:0">[Barrera crítica, oportunidades y lo que hay que comprobar primero]</p></section>
+</article></div>
+</body>
+</html>
