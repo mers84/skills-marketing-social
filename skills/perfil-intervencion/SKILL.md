@@ -7,18 +7,18 @@ description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte
 
 Toma lo que un equipo investigó y lo ordena con los conceptos de Lee y Kotler (2020), *Social Marketing*, 6.ª ed. Entrega una hoja clara que muestra lo que se sabe, lo que se supone y lo que falta averiguar.
 
-La hoja es la entrada de la skill `estrategia-intervencion`. Aquí no se proponen campañas, mensajes ni tácticas.
+La hoja es la entrada de la skill `estrategia-intervencion`. Aquí no se proponen campañas, mensajes ni tácticas. Si el informe ya trae una táctica, anótala como decisión del equipo, sin darla por buena.
 
 ## Reglas
 
 1. **No inventes.** Todo dato sale de los archivos o de lo que diga el equipo.
 2. **Marca el origen de cada dato:**
    - `evidencia`: la persona lo dijo o hizo, o está en una fuente. Indica cuál.
-   - `supuesto`: es una deducción o una decisión del equipo. Indica por qué y cómo comprobarlo.
-   - `falta`: no hay información.
-3. **Separa lo dicho de lo interpretado.** Cita palabras breves y textuales. Si un informe y su transcripción no coinciden, confía en la transcripción y avisa.
+   - `supuesto`: es una deducción a partir de algo que sí consta, o una decisión del equipo. Indica de qué sale y cómo comprobarlo.
+   - `falta`: no hay nada en qué apoyarse. No lo rellenes con lo que suele pasar.
+3. **Separa lo dicho de lo interpretado.** Cita palabras breves y textuales. Si un informe y su transcripción no coinciden, confía en la transcripción y avisa. Si la pregunta sugirió la respuesta, márcalo: «evidencia, sugerida en la pregunta». Las transcripciones automáticas pueden errar en quién habla: dilo si hay duda. Si una fuente no está en la carpeta, escribe «según el informe».
 4. **No generalices.** Con pocas entrevistas escribe «en estas conversaciones encontramos», no «los estudiantes piensan». Muestra cuando las fuentes difieren.
-5. **Protege a las personas.** Usa códigos como «Entrevista 1», sin nombres, contactos ni datos que identifiquen. Respeta lo que alguien pidió no usar. En temas de salud mental no diagnostiques ni pidas experiencias personales.
+5. **Protege a las personas.** Usa códigos como «Entrevista 1», sin nombres, contactos ni datos que identifiquen. Respeta lo que alguien pidió no usar. En temas de salud mental no diagnostiques ni pidas que cuenten su situación de salud.
 6. **Una audiencia y una conducta por hoja.** Si hay varias, pregunta con cuál empezar y crea una hoja por cada una.
 
 ## Pasos
@@ -35,7 +35,7 @@ Consulta [references/conceptos.md](references/conceptos.md) para las definicione
 - Conducta
 - Etapa de cambio
 - Saber y creer
-- Barreras
+- Barreras y barrera crítica candidata
 - Beneficios
 - Motivadores
 - Competencia
@@ -59,7 +59,7 @@ Si el equipo no responde o pide avanzar, deja el punto como `falta`. Nunca lo co
 
 ### 4. Si eligen investigar, prepara las preguntas
 
-Pregunta por experiencias concretas y sin sugerir la respuesta:
+Pregunta por lo que la persona hizo y vivió con la conducta, sin sugerir la respuesta:
 
 - Barreras: «La última vez que pudiste hacerlo y no lo hiciste, ¿qué pasó?»
 - Beneficios: «¿Qué ganarías tú si lo hicieras?»
@@ -93,6 +93,7 @@ Audiencia prioritaria: ...
 
 ## Saber y creer
 ## Barreras
+## Barrera crítica candidata
 ## Beneficios
 ## Motivadores
 ## Competencia
@@ -100,5 +101,7 @@ Audiencia prioritaria: ...
 ## Balanza
 ## Meta y punto de partida
 ## Lo que pasa a la estrategia
+## Decisiones sobre lo que falta
 ## Preguntas pendientes
+## Avisos: lo que no coincide con las transcripciones
 ```

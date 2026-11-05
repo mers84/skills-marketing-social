@@ -9,7 +9,7 @@
 *{box-sizing:border-box}
 body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.45 Verdana,Arial,sans-serif}
 .wrap{max-width:1560px;margin:auto;overflow-x:auto}
-.canvas{min-width:1120px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-areas:"head head head head head" "bar com con ben mot" "bar sab con inf mot" "bal bal bal bal bal" "meta meta pasa pasa pasa";gap:3px;background:var(--ink);border:3px solid var(--ink)}
+.canvas{min-width:1120px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-areas:"head head head head head" "bar com con ben mot" "bar sab con inf mot" "bal bal bal bal bal" "meta meta pasa pasa pasa" "preg preg preg preg preg";gap:3px;background:var(--ink);border:3px solid var(--ink)}
 .head{grid-area:head;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 12px 11px}
 .head b{display:block;font-size:21px}.head span{font-size:13px}
 .cell{background:var(--paper);padding:14px 15px;display:flex;flex-direction:column;gap:8px;min-width:0}
@@ -23,6 +23,7 @@ small{color:var(--muted);font-size:12px}
 .chip{display:inline-block;font-size:11px;font-weight:700;padding:3px 6px;white-space:nowrap}
 .ev{background:var(--ev-bg);color:var(--ev-fg)}.su{background:var(--su-bg);color:var(--su-fg)}.fa{background:var(--fa-bg);color:var(--fa-fg)}
 .bar{grid-area:bar}.com{grid-area:com}.sab{grid-area:sab}.ben{grid-area:ben}.inf{grid-area:inf}.mot{grid-area:mot}.bal{grid-area:bal}.meta{grid-area:meta}
+.preg{grid-area:preg}
 .pasa{grid-area:pasa;background:var(--accent-soft)}
 .con{grid-area:con;background:var(--accent)}
 .con small{color:inherit}
@@ -48,6 +49,7 @@ small{color:var(--muted);font-size:12px}
   <section class="cell bal"><h2><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg>Balanza</h2><div class="matrix"><span></span><b>Conducta que pedimos</b><b>Conducta que compite</b><b>Lo que gana</b><span>[...]</span><span>[...]</span><b>Lo que le cuesta</b><span>[...]</span><span>[...]</span></div></section>
   <section class="cell meta"><h2><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h13l-3 4 3 4H5"/></svg>Meta y punto de partida</h2><p class="def">Cuántas personas harán la conducta y para cuándo.</p><ul><li>[Meta y punto de partida]. <span class="chip fa">Falta</span></li></ul></section>
   <section class="cell pasa"><h2><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>Lo que pasa a la estrategia</h2><p>[Barrera crítica, oportunidades, alertas de evidencia y lo que hay que comprobar primero]</p></section>
+  <section class="cell preg"><h2><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.500 9a2.500 2.500 0 1 1 3.500 2.300c-.7.4-1 .9-1 1.700M12 17h.01"/></svg>Preguntas pendientes</h2><p class="def">Lo que falta averiguar, y qué decidió el equipo: asumir, investigar o dar la información.</p><ul><li>[Punto]: [decisión]. [Pregunta para la audiencia]</li></ul></section>
 </article></div>
 <script>
 /* La página del PDF toma el tamaño de la hoja, para que nunca se corte. */

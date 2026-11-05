@@ -11,9 +11,11 @@ Propósito, audiencia, objetivos de hacer, saber y creer, posicionamiento, prome
 | Etapa | Énfasis |
 |---|---|
 | Precontemplación | Costos de la competidora y beneficios de la nueva, con datos que despierten |
-| Contemplación | Invitar a probar, disipar mitos, atender barreras |
+| Contemplación | Invitar a probar, reestructurar el entorno, disipar mitos, atender barreras |
 | Acción | Beneficios y metas logradas, recordatorios, compromisos |
 | Mantenimiento | Reconocer, premiar, recordar las ganancias a largo plazo |
+
+Esta sección del libro no trata aparte la preparación ni la terminación. Si la audiencia está en preparación o la etapa es mixta o no se sabe, elige lo más cercano y dilo.
 
 ## Principios creativos (cap. 13, pp. 446-447)
 
@@ -46,7 +48,7 @@ Antes de redactar, define razones distintas para prestar atención:
 2. ¿Se puede comprobar?
 3. ¿Otra causa podría decir lo mismo? Si es así, todavía es genérica.
 
-Tres de tres: se queda. Dos: mejora la débil. Una o ninguna: rehazla desde los hechos.
+Pasa una pregunta si responde sí, sí y no, en ese orden. Pasa las tres: se queda. Dos: mejora la débil. Una o ninguna: rehazla desde los hechos.
 
 ## Ideas atrevidas
 

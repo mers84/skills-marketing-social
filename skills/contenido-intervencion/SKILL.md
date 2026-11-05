@@ -13,10 +13,10 @@ La prioridad es lo que el equipo puede grabar con un teléfono y editar con ayud
 
 1. **Parte de la evidencia.** Busca `salidas/perfil.md` y `salidas/estrategia.md`. Si faltan, sugiere correr las skills anteriores o pide al menos audiencia, conducta, promesa y respaldo.
 2. **Respeta el posicionamiento.** Es interno. El eslogan y los mensajes lo expresan; no tienen que repetirlo.
-3. **Cita la fuente de cada idea:** entrevista, hoja o supuesto. Usa las palabras de la audiencia.
+3. **Cita la fuente de cada idea:** entrevista, hoja o supuesto. Usa las palabras de la audiencia como inspiración, sin atribuirlas. Poner en una pieza pública la voz o la frase de alguien requiere su permiso; el de una entrevista suele cubrir solo la investigación.
 4. **No inventes** cifras, testimonios, citas ni promesas. Si algo no tiene respaldo, dilo, propone una alternativa cierta e indica qué evidencia faltaría.
 5. **No censures de entrada.** Una idea atrevida se vale si pasa las cuatro preguntas del método. Explica su riesgo y deja que el equipo decida.
-6. **Cuida a las personas.** En temas sensibles, sin diagnósticos ni testimonios inventados, y que un especialista revise la pieza. No simules con IA la voz o la cara de una persona real.
+6. **Cuida a las personas.** En temas sensibles, sin diagnósticos ni testimonios inventados, y que un especialista revise la pieza. Una escena actuada se vale si no se presenta como un caso real y se avisa. No simules con IA la voz o la cara de una persona real.
 7. **Decide el equipo.** Propón opciones y razones, y espera su elección antes de pasar del paso 4 al 5.
 
 ## Pasos
@@ -33,10 +33,10 @@ Propón de 3 a 5 ángulos, cada uno ligado a una barrera, un beneficio, un motiv
 
 Crea una matriz para que se vea la variedad:
 
-| Audiencia | Ángulo y fuente | Formato | Mensaje | Eslogan | Idea visual | Llamado a actuar |
-|---|---|---|---|---|---|---|
+| Audiencia | Ángulo y fuente | Formato | Mensaje | Eslogan | Idea visual | Llamado a actuar | Riesgo |
+|---|---|---|---|---|---|---|---|
 
-Incluye al menos una idea para video, una para imagen y una que no dependa de redes sociales si la estrategia lo pide. Ajusta el mensaje a la etapa, según el método.
+Incluye al menos una idea para video y una para imagen. Si la estrategia lo pide, agrega una que no dependa de redes sociales. Ajusta el mensaje a la etapa, según el método.
 
 ### 4. Filtra y elige
 
@@ -56,7 +56,7 @@ Entrega siempre el texto de los planos. Después, resuelve los bocetos:
 
 1. **Comprueba si puedes generar imágenes** en este entorno. No lo supongas: si no lo sabes, intenta con un solo boceto.
 2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Con un no, sigue solo con el texto.
-3. **Si no puedes,** dilo en una línea y sigue con el texto. Agrega a cada plano una descripción del boceto, por si el equipo quiere dibujarlo o crearlo en otra herramienta.
+3. **Si no puedes,** dilo en una línea y sigue con el texto. Agrega en «Qué se ve» una descripción del boceto, por si el equipo quiere dibujarlo o crearlo en otra herramienta.
 
 La falta de imágenes nunca detiene el trabajo.
 

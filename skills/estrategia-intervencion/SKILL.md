@@ -24,7 +24,7 @@ Consulta [references/marco.md](references/marco.md) para cada paso.
 
 ### 1. Lee el perfil y resume el diagnóstico
 
-Audiencia, conducta, etapa, barrera crítica, competencia y lo que falta. Si un vacío impide avanzar, dilo y ofrece asumir o investigar.
+Audiencia, conducta, etapa, barrera crítica, competencia y lo que falta. Un vacío impide avanzar si no hay audiencia, conducta o ninguna barrera con la cual trabajar. En ese caso, dilo y ofrece asumir o investigar. Si no, sigue y marca lo provisional.
 
 ### 2. Propón posicionamientos
 

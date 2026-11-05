@@ -18,7 +18,7 @@ Cómo queremos que la audiencia vea la conducta, en especial frente a la compete
 | Contra la competencia | Lo que hace hoy le resulta muy atractivo |
 | Reposicionamiento | Ya tiene una imagen negativa o agotada del tema |
 
-Fórmula del libro: «Queremos que [audiencia] vea [conducta] como [beneficios o razón por la que es mejor que la competidora]». Las tres preguntas de la skill son una adaptación de la cátedra.
+Fórmula del libro: «Queremos que [audiencia] vea [conducta] como [beneficios o razón por la que es mejor que la competidora]». Las preguntas de la skill son una adaptación de la cátedra.
 
 ## Los cuatro frentes (cap. 8, p. 274)
 
