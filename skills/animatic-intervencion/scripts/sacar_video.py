@@ -178,6 +178,21 @@ def plano(n, f, base, tmp, ancho, alto, voces, claves, faltan, aviso):
     return salida
 
 
+def mezclar_ambientes(video, ambientes, duraciones, base, destino):
+    """Pone sonidos de fondo sobre los planos indicados, sin tocar la imagen."""
+    entradas, fil, etiquetas = ["-i", str(video)], "", ["[0:a]"]
+    for k, am in enumerate(ambientes, 1):
+        ini = sum(duraciones[:am["desde_plano"] - 1])
+        largo = sum(duraciones[am["desde_plano"] - 1:am.get("hasta_plano", len(duraciones))])
+        entradas.extend(["-stream_loop", "-1", "-i", str(base / am["archivo"])])
+        fil += (f"[{k}:a]atrim={am.get('inicio', 0)}:{am.get('inicio', 0) + largo:.3f},asetpts=PTS-STARTPTS,aresample=44100,aformat=channel_layouts=stereo,"
+                f"volume={am.get('volumen', 0.2)},afade=t=in:st=0:d=0.8,afade=t=out:st={max(largo - 0.8, 0):.3f}:d=0.8,adelay={int(ini * 1000)}:all=1[am{k}];")
+        etiquetas.append(f"[am{k}]")
+    fil += "".join(etiquetas) + f"amix=inputs={len(etiquetas)}:duration=first:normalize=0[a]"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", *entradas, "-filter_complex", fil, "-map", "0:v", "-map", "[a]",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(destino)], check=True)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("spec")
@@ -216,7 +231,12 @@ def main():
         lista = tmp / "lista.txt"
         lista.write_text("".join(f"file '{p.as_posix()}'\n" for p in partes), encoding="utf-8")
         destino = (base / a.salida).resolve()
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lista), "-c", "copy", "-movflags", "+faststart", str(destino)], check=True)
+        unido = tmp / "unido.mp4"
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lista), "-c", "copy", "-movflags", "+faststart", str(unido)], check=True)
+        if spec.get("ambientes"):
+            mezclar_ambientes(unido, spec["ambientes"], [duracion(p) for p in partes], base, destino)
+        else:
+            shutil.copy(unido, destino)
     print(f"Listo: {destino} ({duracion(destino):.1f} s, {destino.stat().st_size // 1024 // 1024} MB)")
     if faltan:
         print("\nFaltan estos audios; esos tramos solo llevan subtítulo. Crea cada MP3 y vuelve a correr el script:")

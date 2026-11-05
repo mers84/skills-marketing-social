@@ -46,7 +46,11 @@ Pregunta cuál prefieren:
 
 Si ElevenLabs falla, porque la voz pide plan de pago o no hay créditos, el script pasa a Deepgram si tiene clave para eso. Comprueba el costo y las voces disponibles: estas condiciones cambian. Prueba con una sola línea antes de generar todas.
 
-### 4. Saca el video
+### 4. Elige el sonido de fondo
+
+Pregunta si quieren un sonido de ambiente, como brisa o pájaros. Busca uno con licencia libre, por ejemplo en Wikimedia Commons. Lee su licencia, escúchalo y anota el crédito que pida. Comprueba que no traiga voces. El plan gratis de ElevenLabs no deja descargar sus efectos de sonido. Si no hay ambiente, sigue sin él.
+
+### 5. Saca el video
 
 Escribe `salidas/animatic/animatic.json` según [references/formato.md](references/formato.md) y corre:
 
@@ -56,6 +60,6 @@ python scripts/sacar_video.py salidas/animatic/animatic.json
 
 Necesita Python con Pillow, y ffmpeg. Si no puedes correrlo, dilo y arma con el equipo el mismo video en CapCut: los fotogramas en orden, cada MP3 sobre su plano y los textos de `animatic.json`.
 
-### 5. Revisa y entrega
+### 6. Revisa y entrega
 
 Mira cuadros del video y comprueba texto, orden y duración. Di con claridad lo que no pudiste escuchar: una persona debe verlo completo con sonido. Propón dos o tres preguntas para mostrárselo a personas de la audiencia: qué entendieron, qué se les pide y qué les molestó.
