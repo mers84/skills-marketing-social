@@ -19,6 +19,17 @@ La prioridad es lo que el equipo puede grabar con un teléfono y editar con ayud
 6. **Cuida a las personas.** En temas sensibles, sin diagnósticos ni testimonios inventados, y que un especialista revise la pieza. Una escena actuada se vale si no se presenta como un caso real y se avisa. No simules con IA la voz o la cara de una persona real.
 7. **Decide el equipo.** Propón opciones y razones, y espera su elección antes de pasar del paso 4 al 5.
 
+## Antes de empezar
+
+Pregunta qué quieren generar, para no gastar de más, y haz solo eso:
+
+- Ideas y mensajes.
+- Storyboard en texto.
+- Storyboard con bocetos.
+- Plan de edición, si ya grabaron.
+
+Si piden el video de prueba, primero se aprueba el storyboard. Después se usa `animatic-intervencion`.
+
 ## Pasos
 
 ### 1. Arma el brief
@@ -55,7 +66,7 @@ Para el video elegido, crea un plan plano a plano. Si hay un video de referencia
 
 Entrega siempre el texto de los planos. Después, resuelve los bocetos:
 
-1. **Comprueba si puedes generar imágenes** en este entorno. No lo supongas: si no lo sabes, intenta con un solo boceto.
+1. **Comprueba si puedes generar imágenes** en este entorno: Nano Banana en Antigravity, o la generación de imágenes de Codex en Codex. No lo supongas: si no lo sabes, intenta con un solo boceto.
 2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Pide el formato en el prompt y comprueba cada imagen: si el video es vertical, el boceto debe ser más alto que ancho; si no lo es, rehazlo. Con un no, sigue solo con el texto.
 3. **Si no puedes,** dilo en una línea y sigue con el texto. Agrega en «Qué se ve» una descripción del boceto, por si el equipo quiere dibujarlo o crearlo en otra herramienta.
 

@@ -22,6 +22,8 @@ perfil-intervencion      → hoja del perfil de la audiencia
 estrategia-intervencion  → hoja de estrategia y brief
         ↓
 contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
+        ↓ (con el storyboard aprobado)
+animatic-intervencion    → video de prueba con fotogramas a color y voz en off
 ```
 
 | Skill | Qué hace |
@@ -29,6 +31,8 @@ contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
 | [`perfil-intervencion`](skills/perfil-intervencion/SKILL.md) | Ordena los hallazgos: conducta, etapa de cambio, barreras, beneficios, motivadores, competencia e influyentes. Marca qué es evidencia, qué es supuesto y qué falta |
 | [`estrategia-intervencion`](skills/estrategia-intervencion/SKILL.md) | Propone posicionamientos y acciones por los cuatro frentes de la balanza, y las combina en una sola estrategia |
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte el perfil y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
+
+| [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
 
 ## Cómo instalarlas
 
