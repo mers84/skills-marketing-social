@@ -1,3 +1,4 @@
 claves-voz.env
 .env
 __pycache__/
+!skills/animatic-intervencion/assets/claves-voz.env
