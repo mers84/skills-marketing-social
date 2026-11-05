@@ -71,7 +71,8 @@ El equipo elige. Después sugiere qué probar antes con personas reales.
 Guarda en `salidas/`:
 
 - `estrategia.md`: los datos, para la siguiente skill.
-- `estrategia.html`: la hoja visual, a partir de [assets/hoja-estrategia.html](assets/hoja-estrategia.html).
+- `estrategia.html`: la hoja visual, a partir de [assets/hoja-estrategia.html](assets/hoja-estrategia.html). Crece según la información.
+- `estrategia.pdf`: la misma hoja, generada desde el HTML con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados). Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF.
 
 `estrategia.md` termina con este brief (cap. 13, pp. 414-415):
 

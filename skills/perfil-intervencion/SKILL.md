@@ -72,7 +72,8 @@ Pregunta por experiencias concretas y sin sugerir la respuesta:
 Guarda en `salidas/`:
 
 - `perfil.md`: los datos, para la siguiente skill.
-- `perfil.html`: la hoja visual, a partir de [assets/hoja-perfil.html](assets/hoja-perfil.html). Conserva su diseño y sus recuadros, y usa viñetas breves.
+- `perfil.html`: la hoja horizontal tipo Canvas, a partir de [assets/hoja-perfil.html](assets/hoja-perfil.html). Conserva su diseño, sus íconos y sus recuadros. La hoja crece según la información: no recortes datos para que quepan. Escribe viñetas claras, con el detalle que haga falta.
+- `perfil.pdf`: la misma hoja, para compartir o imprimir. Genérala desde `perfil.html` con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados), y revisa que no se corte ningún recuadro. Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF, en horizontal.
 
 ### 6. Cierra
 

@@ -59,7 +59,7 @@ npx skills add mers84/skills-marketing-social
 /contenido-intervencion Usa la estrategia. Dame cinco mensajes y el guion de un video de 30 segundos.
 ```
 
-Los resultados quedan en `salidas/`.
+Los resultados quedan en `salidas/`. Las hojas de perfil y de estrategia salen en HTML y en PDF.
 
 ## Límites
 

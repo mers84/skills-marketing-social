@@ -22,6 +22,7 @@ small{color:var(--muted)}
 .pos{background:var(--accent)}.big{font-size:23px;font-weight:700;line-height:1.2}
 .next{background:var(--accent-soft)}
 @media (max-width:640px){.strat{grid-template-columns:minmax(0,1fr)}}
+@media print{*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{padding:0;background:#fff}.strat{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -35,5 +36,9 @@ small{color:var(--muted)}
   <section class="cell"><h2>Hacer visible lo que pierde</h2><ul><li>[Acción]. <small>[Herramienta]</small> <span class="chip fa">Falta</span></li></ul></section>
   <section class="cell next full"><h2>Lo que pasa a producción</h2><p>[Combinación elegida, piezas que necesita y lo que hay que comprobar antes]</p></section>
 </article>
+<script>
+/* La página del PDF toma el tamaño de la hoja, para que nunca se corte. */
+(function(){var r=document.querySelector('.strat').getBoundingClientRect(),s=document.createElement('style');s.textContent='@page{size:'+Math.ceil(r.width+64)+'px '+Math.ceil(r.height+64)+'px;margin:8mm}';document.head.appendChild(s)})();
+</script>
 </body>
 </html>
