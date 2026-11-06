@@ -17,7 +17,7 @@ Funcionan en cadena: lo que sale de una es la entrada de la siguiente.
 ```text
 Informe y entrevistas
         ↓
-perfil-intervencion      → hoja del perfil de la audiencia
+audiencia-intervencion   → hoja de la audiencia prioritaria
         ↓
 estrategia-intervencion  → hoja de estrategia y brief
         ↓
@@ -28,9 +28,9 @@ animatic-intervencion    → video de prueba con fotogramas a color y voz en off
 
 | Skill | Qué hace |
 |---|---|
-| [`perfil-intervencion`](skills/perfil-intervencion/SKILL.md) | Ordena los hallazgos: conducta, etapa de cambio, barreras, beneficios, motivadores, competencia e influyentes. Marca qué es evidencia, qué es supuesto y qué falta |
+| [`audiencia-intervencion`](skills/audiencia-intervencion/SKILL.md) | Ordena los hallazgos: conducta, etapa de cambio, barreras, beneficios, motivadores, competencia e influyentes. Marca qué es evidencia, qué es supuesto y qué falta |
 | [`estrategia-intervencion`](skills/estrategia-intervencion/SKILL.md) | Propone posicionamientos y acciones por los cuatro frentes de la balanza, y las combina en una sola estrategia |
-| [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte el perfil y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
+| [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
 
@@ -39,6 +39,8 @@ animatic-intervencion    → video de prueba con fotogramas a color y voz en off
 Siguen el formato abierto Agent Skills, que usan agentes como Antigravity de Google. La forma más simple es pedírselo al agente, abierto en la carpeta de tu proyecto:
 
 > Revisa https://github.com/mers84/skills-marketing-social, explícame qué hace cada skill e instálalas en este proyecto.
+
+Si ya habías instalado la versión anterior, borra la carpeta `perfil-intervencion`: ahora se llama `audiencia-intervencion`.
 
 O copia lo que necesites de `skills/` a una de estas carpetas:
 
@@ -58,9 +60,9 @@ npx skills add mers84/skills-marketing-social
 3. Llama a cada skill:
 
 ```text
-/perfil-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
-/estrategia-intervencion Usa el perfil de esta carpeta.
-/contenido-intervencion Usa el perfil y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
+/audiencia-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
+/estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
+/contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
 ```
 
 Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.

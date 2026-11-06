@@ -1,4 +1,4 @@
-# Conceptos del perfil
+# Conceptos de la hoja de la audiencia
 
 Paráfrasis de Lee y Kotler (2020), *Social Marketing*, 6.ª ed., con las páginas del PDF de esa edición. Lo que no sale del libro está marcado.
 
@@ -60,7 +60,7 @@ A quienes escucha, mira o admira en el tema: familia, compañeros, médicos, med
 
 ## Balanza
 
-La idea es cambiar la proporción entre beneficios y barreras para que la conducta resulte más atractiva (McKenzie-Mohr y Smith, en cap. 8, p. 274). Para el perfil, registra:
+La idea es cambiar la proporción entre beneficios y barreras para que la conducta resulte más atractiva (McKenzie-Mohr y Smith, en cap. 8, p. 274). En la hoja, registra:
 
 | | Conducta deseada | Conducta competidora |
 |---|---|---|

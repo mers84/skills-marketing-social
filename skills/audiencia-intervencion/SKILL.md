@@ -1,9 +1,9 @@
 ---
-name: perfil-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte un informe, entrevistas o notas de investigación en un perfil claro de la audiencia para una campaña de cambio de conducta. Usar cuando se pida perfilar a una audiencia prioritaria, sacar barreras, beneficios, motivadores, competencia o influyentes, ubicar la etapa de cambio, organizar hallazgos de entrevistas o preparar la información para diseñar una intervención de marketing social.
+name: audiencia-intervencion
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte un informe, entrevistas o notas de investigación en la hoja de la audiencia prioritaria de una campaña de cambio de conducta. Usar cuando se pida describir o perfilar a una audiencia prioritaria, sacar barreras, beneficios, motivadores, competencia o influyentes, ubicar la etapa de cambio, organizar hallazgos de entrevistas o preparar la información para diseñar una intervención de marketing social.
 ---
 
-# Perfil de intervención
+# Audiencia prioritaria
 
 Toma lo que un equipo investigó y lo ordena con los conceptos de Lee y Kotler (2020), *Social Marketing*, 6.ª ed. Entrega una hoja clara que muestra lo que se sabe, lo que se supone y lo que falta averiguar.
 
@@ -71,19 +71,19 @@ Pregunta por lo que la persona hizo y vivió con la conducta, sin sugerir la res
 
 Guarda en `salidas/`:
 
-- `perfil.md`: los datos, para la siguiente skill.
-- `perfil.html`: la hoja horizontal tipo Canvas, a partir de [assets/hoja-perfil.html](assets/hoja-perfil.html). Conserva su diseño, sus íconos y sus recuadros. La hoja crece según la información: no recortes datos para que quepan. Escribe viñetas claras, con el detalle que haga falta.
-- `perfil.pdf`: la misma hoja, para compartir o imprimir. Genérala desde `perfil.html` con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados), y revisa que no se corte ningún recuadro. Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF, en horizontal.
+- `audiencia.md`: los datos, para la siguiente skill.
+- `audiencia.html`: la hoja horizontal tipo Canvas, a partir de [assets/hoja-audiencia.html](assets/hoja-audiencia.html). Conserva su diseño, sus íconos y sus recuadros. La hoja crece según la información: no recortes datos para que quepan. Escribe viñetas claras, con el detalle que haga falta.
+- `audiencia.pdf`: la misma hoja, para compartir o imprimir. Genérala desde `audiencia.html` con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados), y revisa que no se corte ningún recuadro. Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF, en horizontal.
 
 ### 6. Cierra
 
 Di en pocas líneas qué pasa a la estrategia, qué conviene comprobar primero y si la evidencia sugiere revisar la audiencia o la conducta. El libro lo prevé cuando las barreras son insalvables o la conducta no se entiende (cap. 8, p. 282).
 
-## Formato de `perfil.md`
+## Formato de `audiencia.md`
 
 ```markdown
-# Perfil de intervención: [proyecto]
-Audiencia prioritaria: ...
+# Audiencia prioritaria: [proyecto]
+Audiencia: ...
 
 ## Conducta
 - ... [supuesto: por qué y cómo comprobarlo]

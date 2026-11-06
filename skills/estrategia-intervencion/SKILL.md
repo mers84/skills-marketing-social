@@ -1,17 +1,17 @@
 ---
 name: estrategia-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Diseña una estrategia de intervención para cambiar una conducta a partir del perfil de una audiencia. Usar cuando se pida definir el posicionamiento de una causa, pensar estrategias contra una barrera, combinar acciones por los cuatro frentes de la balanza, iterar ideas de intervención de marketing social o preparar el brief para producir contenido.
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Diseña una estrategia de intervención para cambiar una conducta a partir de la hoja de una audiencia prioritaria. Usar cuando se pida definir el posicionamiento de una causa, pensar estrategias contra una barrera, combinar acciones por los cuatro frentes de la balanza, iterar ideas de intervención de marketing social o preparar el brief para producir contenido.
 ---
 
 # Estrategia de intervención
 
-Parte del perfil de la audiencia y llega a **una estrategia**: un posicionamiento y un conjunto de acciones que apuntan a lo mismo. Sigue a Lee y Kotler (2020), *Social Marketing*, 6.ª ed.
+Parte de la hoja de la audiencia prioritaria y llega a **una estrategia**: un posicionamiento y un conjunto de acciones que apuntan a lo mismo. Sigue a Lee y Kotler (2020), *Social Marketing*, 6.ª ed.
 
 No es una estrategia por cada barrera o beneficio. Es una sola, que combina acciones.
 
 ## Reglas
 
-1. **Empieza por el perfil.** Busca `salidas/perfil.md`. Si no existe, sugiere correr `perfil-intervencion` o pide esos datos.
+1. **Empieza por la audiencia.** Busca `salidas/audiencia.md` (o `salidas/perfil.md`, el nombre anterior). Si no existe, sugiere correr `audiencia-intervencion` o pide esos datos.
 2. **Hereda los estados.** Cada idea indica de qué dato sale. Si depende de un supuesto o de algo que falta, dilo: «esta opción se cae si…». Lo que propongas no es evidencia.
 3. **No todo es contenido.** Revisa también qué ofrecer, qué costo bajar y dónde o cuándo actuar.
 4. **Solo promesas ciertas.** Marca lo que hay que comprobar con la organización. No inventes cifras, testimonios ni apoyos.
@@ -22,7 +22,7 @@ No es una estrategia por cada barrera o beneficio. Es una sola, que combina acci
 
 Consulta [references/marco.md](references/marco.md) para cada paso.
 
-### 1. Lee el perfil y resume el diagnóstico
+### 1. Lee la hoja de la audiencia y resume el diagnóstico
 
 Audiencia, conducta, etapa, barrera crítica, competencia y lo que falta. Un vacío impide avanzar si no hay audiencia, conducta o ninguna barrera con la cual trabajar. En ese caso, dilo y ofrece asumir o investigar. Si no, sigue y marca lo provisional.
 
@@ -33,7 +33,7 @@ Propón tres, con enfoques distintos. Para cada uno:
 - ¿Cómo lo ve hoy la audiencia?
 - ¿Cómo queremos que lo vea?
 - ¿Qué lo hace creíble?
-- ¿Qué dato del perfil lo sostiene?
+- ¿Qué dato de la hoja de la audiencia lo sostiene?
 
 Pide al equipo que elija uno. Es una decisión interna: no es un eslogan.
 

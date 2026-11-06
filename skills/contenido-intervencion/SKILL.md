@@ -1,17 +1,17 @@
 ---
 name: contenido-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte el perfil y la estrategia de una campaña de marketing social en ideas de contenido, mensajes, eslóganes, un storyboard por planos y un plan de edición. Usar cuando se pida generar ideas de contenido, escribir mensajes o eslóganes de una causa, crear el guion o storyboard de un video corto, preparar qué grabar, crear una voz en off o editar un video con apoyo de IA.
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Convierte la hoja de la audiencia y la estrategia de una campaña de marketing social en ideas de contenido, mensajes, eslóganes, un storyboard por planos y un plan de edición. Usar cuando se pida generar ideas de contenido, escribir mensajes o eslóganes de una causa, crear el guion o storyboard de un video corto, preparar qué grabar, crear una voz en off o editar un video con apoyo de IA.
 ---
 
 # Contenido de intervención
 
-Parte del perfil y de la estrategia, y llega a piezas que se pueden producir: ideas, mensajes, eslóganes, un storyboard y un plan de edición. Se basa en Lee y Kotler (2020), *Social Marketing*, 6.ª ed., cap. 13. Los métodos de apoyo están en [references/metodos.md](references/metodos.md).
+Parte de la hoja de la audiencia y de la estrategia, y llega a piezas que se pueden producir: ideas, mensajes, eslóganes, un storyboard y un plan de edición. Se basa en Lee y Kotler (2020), *Social Marketing*, 6.ª ed., cap. 13. Los métodos de apoyo están en [references/metodos.md](references/metodos.md).
 
 La prioridad es lo que el equipo puede grabar con un teléfono y editar con ayuda de IA. Generar imágenes o video con IA es una opción, no el punto de partida.
 
 ## Reglas
 
-1. **Parte de la evidencia.** Busca `salidas/perfil.md` y `salidas/estrategia.md`. Si faltan, sugiere correr las skills anteriores o pide al menos audiencia, conducta, promesa y respaldo.
+1. **Parte de la evidencia.** Busca `salidas/audiencia.md` (o `salidas/perfil.md`, el nombre anterior) y `salidas/estrategia.md`. Si faltan, sugiere correr las skills anteriores o pide al menos audiencia, conducta, promesa y respaldo.
 2. **Respeta el posicionamiento.** Es interno. El eslogan y los mensajes lo expresan; no tienen que repetirlo.
 3. **Cita la fuente de cada idea:** entrevista, hoja o supuesto. Usa las palabras de la audiencia como inspiración, sin atribuirlas. Poner en una pieza pública la voz o la frase de alguien requiere su permiso; el de una entrevista suele cubrir solo la investigación.
 4. **No inventes** cifras, testimonios, citas ni promesas. Si algo no tiene respaldo, dilo, propone una alternativa cierta e indica qué evidencia faltaría.
@@ -38,7 +38,7 @@ Resume en una tabla: audiencia y etapa; qué debe hacer, saber y creer; posicion
 
 ### 2. Define los ángulos
 
-Propón de 3 a 5 ángulos, cada uno ligado a una barrera, un beneficio, un motivador, la competencia o un influyente del perfil. Un ángulo es una razón distinta para prestar atención.
+Propón de 3 a 5 ángulos, cada uno ligado a una barrera, un beneficio, un motivador, la competencia o un influyente de la hoja de la audiencia. Un ángulo es una razón distinta para prestar atención.
 
 ### 3. Genera las ideas
 
