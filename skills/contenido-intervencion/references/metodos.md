@@ -27,18 +27,17 @@ El miedo fuerte necesita una solución eficaz y fácil (pp. 429-430). El humor n
 
 *Adaptado de `ad-creative`, de marketingskills.*
 
-Antes de redactar, define razones distintas para prestar atención:
+Antes de redactar, define razones distintas para prestar atención. Cada ángulo es un concepto de la hoja de la audiencia y lleva el nombre que le dan Lee y Kotler:
 
 | Ángulo | De dónde sale | Forma |
 |---|---|---|
-| Dolor | Una barrera | Nombra el problema tal como la audiencia lo dice |
-| Lo que gana | Un beneficio | Muestra el resultado que le importa |
-| Los demás lo hacen | Una norma o un influyente | Hace visible la conducta, solo si es cierto |
-| Curiosidad | Un dato o una creencia equivocada | Abre una pregunta y la responde |
-| Comparación | La competencia | Pone dos conductas lado a lado |
-| Urgencia | Un plazo real | Dice por qué ahora |
-| Identidad | Valores o grupo | Dice «esto es para gente como tú» |
-| Contra la corriente | Una idea muy repetida | Cuestiona lo que todos dan por cierto |
+| Barrera | Una barrera de la hoja | Nombra el problema tal como la audiencia lo dice |
+| Beneficio | Un beneficio de la hoja | Muestra lo que gana, lo que a ella le importa |
+| Competencia | Lo que hace en vez de lo que le pedimos | Pone lado a lado lo que hace hoy y lo que le pedimos |
+| Saber y creer | Un dato o una creencia equivocada | Cuestiona lo que se da por normal o corrige la creencia |
+| Influyentes | A quién escucha o admira | Muestra que los suyos también lo hacen, solo si es cierto |
+
+Si la hoja trae un plazo real, también sirve decir por qué ahora. No inventes urgencias.
 
 ## Filtro de tres preguntas
 
