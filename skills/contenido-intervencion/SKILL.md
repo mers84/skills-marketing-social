@@ -42,10 +42,16 @@ Propón de 3 a 5 ángulos, cada uno ligado a una barrera, un beneficio, un motiv
 
 ### 3. Genera las ideas
 
-Crea una matriz para que se vea la variedad:
+Crea una matriz para que se vea la variedad. Las cuatro primeras columnas dicen qué es cada idea; las demás, cómo se sostiene:
 
-| Audiencia | Ángulo y fuente | Formato | Mensaje | Eslogan | Idea visual | Llamado a actuar | Riesgo |
-|---|---|---|---|---|---|---|---|
+| # | Tipo | Formato | La idea | Eslogan | Ángulo y fuente | Mensaje | Llamado a actuar | Riesgo |
+|---|---|---|---|---|---|---|---|---|
+
+- **Tipo:** video, imagen, aviso de viva voz, actividad, etc.
+- **Formato:** cómo y dónde se ve: «vertical, 30 s», «afiche», «en el salón, 20 s».
+- **La idea:** una o dos frases que cuenten qué se ve y qué pasa, para que se pueda imaginar sin más explicación. No la reduzcas al eslogan.
+
+En el chat, muestra un resumen con #, tipo, formato y la idea con su eslogan entre comillas, y di cuáles recomiendas. La matriz completa va en la hoja.
 
 Incluye al menos una idea para video y una para imagen. Si la estrategia lo pide, agrega una que no dependa de redes sociales. Ajusta el mensaje a la etapa, según el método.
 
