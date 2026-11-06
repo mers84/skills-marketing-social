@@ -73,7 +73,7 @@ Para el video elegido, crea un plan plano a plano. Si hay un video de referencia
 Entrega siempre el texto de los planos. Después, resuelve los bocetos:
 
 1. **Comprueba si puedes generar imágenes** en este entorno: Nano Banana en Antigravity, o la generación de imágenes de Codex en Codex. No lo supongas: si no lo sabes, intenta con un solo boceto.
-2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Pide el formato en el prompt y comprueba cada imagen: si el video es vertical, el boceto debe ser más alto que ancho; si no lo es, rehazlo. Con un no, sigue solo con el texto.
+2. **Si puedes,** pregunta: «¿Quieres que cree bocetos del storyboard?». Con un sí, crea uno por plano, **a lápiz y en blanco y negro**. Se lee como plan de rodaje y evita publicar por error una imagen generada. Pide el formato en el prompt y comprueba cada imagen: si el video es vertical, el boceto debe ser más alto que ancho; si no lo es, rehazlo. Si el plano muestra un cartel, una pantalla o un letrero, escribe en el boceto su texto real, como el eslogan o el llamado a actuar, y no rayas ni un recuadro vacío; comprueba que se lea y que esté bien escrito, con sus tildes. Con un no, sigue solo con el texto.
 3. **Si no puedes,** dilo en una línea y sigue con el texto. Agrega en «Qué se ve» una descripción del boceto, por si el equipo quiere dibujarlo o crearlo en otra herramienta.
 
 La falta de imágenes nunca detiene el trabajo.

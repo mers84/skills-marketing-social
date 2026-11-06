@@ -30,6 +30,7 @@ Usa la herramienta de imágenes de tu entorno: Nano Banana en Antigravity, o la 
 1. Crea primero **un solo fotograma** y pide que aprueben el estilo.
 2. Crea los demás, uno por plano, describiendo a los personajes igual en cada prompt para que se parezcan.
 3. Comprueba cada imagen: si el video es vertical, debe ser más alta que ancha. Si no lo es, rehazla.
+4. Si un plano muestra un cartel, una pantalla o un letrero, pide en el prompt su texto exacto y revisa que se lea bien escrito, con sus tildes. Un cartel en blanco o con rayas confunde. Si ya hay un fotograma y solo falta el texto, edita esa imagen en lugar de crear otra, para que no cambie la escena.
 
 Guárdalos en `salidas/animatic/fotogramas/`. Si no puedes generar imágenes, dilo y usa los bocetos del storyboard.
 
