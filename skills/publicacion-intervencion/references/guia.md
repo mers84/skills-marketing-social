@@ -55,7 +55,7 @@ Comprueba en la ayuda de cada red las medidas vigentes. Como regla general:
 ### Netlify Drop (el más sencillo)
 
 1. Crear una cuenta gratis en [Netlify](https://app.netlify.com/signup), con Google o con correo. Sin cuenta, el sitio se borra a las pocas horas.
-2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/revision` completa a la página.
+2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/revision` completa, con `index.html` y la subcarpeta `piezas/` adentro. Si se sube solo el HTML, la página abre pero sin imágenes ni videos. La página de Netlify Drop dice que también acepta un zip; si el zip falla, se descomprime y se arrastra la carpeta.
 3. En segundos da un enlace del tipo `nombre-al-azar.netlify.app`. En la configuración del sitio se le puede cambiar el nombre, por ejemplo `revision-fundacion.netlify.app`.
 4. Para actualizar, se arrastra de nuevo la carpeta en la sección de despliegues del mismo sitio, y el enlace queda igual.
 
