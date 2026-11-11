@@ -24,6 +24,8 @@ estrategia-intervencion  → hoja de estrategia y brief
 contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
         ↓ (con el storyboard aprobado)
 animatic-intervencion    → video de prueba con fotogramas a color y voz en off
+        ↓
+publicacion-intervencion → canales, calendario, textos por red y página de revisión con enlace
 ```
 
 | Skill | Qué hace |
@@ -33,6 +35,7 @@ animatic-intervencion    → video de prueba con fotogramas a color y voz en off
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
+| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red y crea una página de revisión con un enlace para que la institución apruebe las piezas |
 
 ## Cómo instalarlas
 
@@ -63,6 +66,7 @@ npx skills add mers84/skills-marketing-social
 /audiencia-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
 /estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
 /contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
+/publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página de revisión para la institución.
 ```
 
 Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Revisión de piezas</title>
+<style>
+/* Página de revisión: la institución ve cada pieza tal como saldrá y la aprueba desde el teléfono. */
+:root{--bg:#f6f5f1;--paper:#fff;--ink:#1d2023;--muted:#585d62;--line:#d9d7cf;--accent:#f3c613;--ok:#1c5a2c;--ok-bg:#dcefdf;--ask:#7a4d00;--ask-bg:#fbeac4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Verdana,Arial,sans-serif}
+main{max-width:860px;margin:auto;padding:28px 16px 56px;display:grid;gap:22px}
+h1{margin:0;font-size:clamp(26px,5vw,38px);line-height:1.15}
+h2{margin:0;font-size:19px;line-height:1.25}
+p{margin:0}
+.lead{color:var(--muted)}
+.how{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--accent);padding:14px 18px;display:grid;gap:6px}
+.pieza{background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);min-width:0}
+.media{background:#ecebe6;display:flex;align-items:center;justify-content:center;min-height:220px}
+.media img,.media video{display:block;width:100%;height:100%;max-height:520px;object-fit:contain}
+.media .sin{color:var(--muted);padding:20px;text-align:center;font-size:14px}
+.info{padding:16px 18px;display:grid;gap:10px;align-content:start;min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font-size:13px;font-weight:700;background:var(--bg);border:1px solid var(--line);padding:3px 8px}
+.texto{white-space:pre-wrap;border-top:1px solid var(--line);padding-top:10px}
+.pide{font-size:14px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btns a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent}
+.si{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)!important}
+.no{background:var(--ask-bg);color:var(--ask);border-color:var(--ask)!important}
+.correo{color:var(--ink);border-color:var(--line)!important;background:var(--paper)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:640px){.pieza{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<main>
+  <header style="display:grid;gap:8px">
+    <p class="lead" id="proyecto">[Proyecto · Institución]</p>
+    <h1>Revisión de piezas de la campaña</h1>
+    <p class="lead" id="intro">[Una oración: qué campaña es y para qué fecha se necesita la respuesta.]</p>
+  </header>
+  <div class="how">
+    <h2>Cómo revisar</h2>
+    <p>Cada pieza aparece tal como saldrá, con su fecha y su canal. Si está bien, toque <b>Apruebo</b>. Si quiere un cambio, toque <b>Pido un cambio</b> y escriba qué cambiaría. Los botones abren un mensaje ya escrito para el equipo.</p>
+  </div>
+  <div id="piezas" style="display:grid;gap:18px"></div>
+  <footer id="pie">Preparado por [equipo]. Ninguna pieza se publica sin su aprobación.</footer>
+</main>
+<script>
+// Datos de la campaña: la skill reemplaza este bloque. Las rutas de "archivo" son relativas a esta página.
+const CAMPANA = {
+  proyecto: "[Proyecto · Institución]",
+  intro: "[Qué campaña es y para cuándo se necesita la respuesta]",
+  equipo: "[Nombre del equipo]",
+  whatsapp: "",            // número del equipo con código de país, solo dígitos, p. ej. 584141234567
+  correo: "",              // correo del equipo
+  piezas: [
+    {id: 1, titulo: "[Nombre de la pieza]", fecha: "[Día y hora]", canal: "[Red o lugar]", formato: "[Video vertical, 30 s]",
+     archivo: "", texto: "[Texto que acompaña la pieza]", pide: "[Qué le pide a la persona]"}
+  ]
+};
+(function(){
+  const $ = (id) => document.getElementById(id);
+  $('proyecto').textContent = CAMPANA.proyecto;
+  $('intro').textContent = CAMPANA.intro;
+  $('pie').textContent = 'Preparado por ' + CAMPANA.equipo + '. Ninguna pieza se publica sin su aprobación.';
+  const msg = (p, ok) => ok
+    ? 'Apruebo la pieza ' + p.id + ' («' + p.titulo + '») de la campaña ' + CAMPANA.proyecto + '.'
+    : 'Pido un cambio en la pieza ' + p.id + ' («' + p.titulo + '») de la campaña ' + CAMPANA.proyecto + ': ';
+  const wa = (t) => CAMPANA.whatsapp ? 'https://wa.me/' + CAMPANA.whatsapp + '?text=' + encodeURIComponent(t) : 'https://wa.me/?text=' + encodeURIComponent(t);
+  const mail = (t) => 'mailto:' + CAMPANA.correo + '?subject=' + encodeURIComponent('Revisión de piezas · ' + CAMPANA.proyecto) + '&body=' + encodeURIComponent(t);
+  const media = (p) => {
+    if (!p.archivo) return '<div class="sin">La pieza se describe en el texto: todavía no hay archivo.</div>';
+    return /\.(mp4|webm|mov)$/i.test(p.archivo)
+      ? '<video src="' + p.archivo + '#t=0.5" controls playsinline preload="metadata"></video>'
+      : '<img src="' + p.archivo + '" alt="' + p.titulo.replace(/"/g, '') + '">';
+  };
+  const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  $('piezas').innerHTML = CAMPANA.piezas.map((p) =>
+    '<article class="pieza"><div class="media">' + media(p) + '</div><div class="info">'
+    + '<h2>' + p.id + '. ' + esc(p.titulo) + '</h2>'
+    + '<div class="meta"><span>' + esc(p.fecha) + '</span><span>' + esc(p.canal) + '</span><span>' + esc(p.formato) + '</span></div>'
+    + '<p class="texto">' + esc(p.texto) + '</p>'
+    + '<p class="pide"><b>Qué le pide a la persona:</b> ' + esc(p.pide) + '</p>'
+    + '<div class="btns"><a class="si" href="' + wa(msg(p, true)) + '" target="_blank" rel="noopener">Apruebo</a>'
+    + '<a class="no" href="' + wa(msg(p, false)) + '" target="_blank" rel="noopener">Pido un cambio</a>'
+    + (CAMPANA.correo ? '<a class="correo" href="' + mail(msg(p, true)) + '">Responder por correo</a>' : '') + '</div>'
+    + '</div></article>').join('');
+})();
+</script>
+</body>
+</html>
