@@ -71,8 +71,12 @@ Firebase es de Google y su plan gratis, Spark, no pide forma de pago según la [
 
 ## Programar
 
-**Meta Business Suite** ([business.facebook.com](https://business.facebook.com)): crear la publicación, elegir Facebook, Instagram o las dos, y en vez de publicar elegir programar con fecha y hora. Queda en el planificador, donde se puede corregir, cambiar de hora o borrar antes de que salga.
+Tres formas, de la más manual a la más automática.
 
-**Metricool** ([planes](https://metricool.com/pricing/)): programa en varias redes a la vez. El plan gratis permite una marca y hasta 20 publicaciones programadas al mes.
+**En cada red.** Meta Business Suite ([business.facebook.com](https://business.facebook.com)) programa publicaciones, reels e historias de Facebook e Instagram y deja corregirlas antes de que salgan. TikTok Studio, en la computadora, programa hasta unos 10 días antes, según varias guías, y un video programado no se edita: se borra y se sube de nuevo. YouTube Studio deja elegir «Programar» al subir el video.
+
+**Desde una aplicación.** [Metricool](https://metricool.com/pricing/) (gratis: una marca y hasta 20 publicaciones programadas al mes) o [Buffer](https://buffer.com/pricing) (gratis: hasta 3 redes y 10 publicaciones en cola por red).
+
+**Con un conector MCP.** Metricool y Buffer tienen un servidor MCP oficial, incluido en su plan gratis ([ayuda de Metricool](https://help.metricool.com/metricool-mcp-7s6sx), [MCP de Buffer](https://buffer.com/mcp)). En Antigravity se agrega en MCP Servers > Manage MCP Servers > View raw config, con `{"mcpServers": {"metricool": {"serverUrl": "https://ai.metricool.com/mcp"}}}` ([documentación de MCP en Antigravity](https://antigravity.google/docs/mcp)). La primera vez pide iniciar sesión en Metricool. Con el conector, el agente programa las publicaciones del calendario y devuelve el enlace de cada una en el planificador.
 
 Lo que no se puede programar, como un mensaje en un grupo de WhatsApp o una invitación en persona, queda en el calendario con su responsable.

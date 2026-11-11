@@ -1,6 +1,6 @@
 ---
 name: publicacion-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Toma la audiencia, la estrategia y las piezas de una campaña de marketing social y la deja lista para salir al aire. Propone los canales con datos, explica las opciones de cuenta, arma el calendario de la campaña con publicaciones y acciones en persona, adapta los textos a cada red, crea una página de revisión con un enlace para que la institución apruebe las piezas y guía la programación. Usar cuando se pida elegir redes o canales, armar un calendario de publicaciones, preparar la aprobación de piezas, crear un enlace para revisar piezas o programar publicaciones.
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Toma la audiencia, la estrategia y las piezas de una campaña de marketing social y la deja lista para salir al aire. Propone los canales con datos, explica las opciones de cuenta, arma el calendario de la campaña con publicaciones y acciones en persona, adapta los textos a cada red, crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones. Usar cuando se pida elegir redes o canales, armar un calendario de publicaciones, preparar la aprobación de piezas, crear un enlace para revisar piezas o programar publicaciones.
 ---
 
 # Publicación de intervención
@@ -54,13 +54,15 @@ Por cada pieza y cada canal, escribe el texto que la acompaña, con el formato d
 
 ### 5. Crea la página de revisión
 
-A partir de [assets/revision.html](assets/revision.html), crea `salidas/revision/index.html` con todas las piezas en el orden del calendario. Llena el bloque `CAMPANA` del archivo: proyecto, equipo, WhatsApp o correo del equipo y, por pieza, título, fecha, canal, formato, texto, qué le pide a la persona y la ruta del archivo. Copia las imágenes y videos a `salidas/revision/piezas/`. Para que la página cargue rápido en el teléfono y se pueda subir sin problemas, deja cada video en 720 píxeles de ancho o menos y por debajo de 10 MB; si tienes ffmpeg, comprímelo. Al final, la carpeta `salidas/revision` tiene `index.html` y la subcarpeta `piezas/`: esa carpeta completa es la que se sube. Cada pieza tiene los botones «Apruebo» y «Pido un cambio», que abren un mensaje ya escrito para el equipo.
+A partir de [assets/revision.html](assets/revision.html), crea `salidas/revision/index.html`: una grilla con todas las piezas en el orden del calendario. Cada pieza muestra su video o imagen, su número, su título, su fecha, su canal, una explicación corta de qué es y para qué sirve, y el texto que la acompaña. Llena el bloque `CAMPANA` del archivo. La página no guarda nada: la institución manda sus comentarios por WhatsApp, indicando el número de la pieza.
 
-Después, explica cómo publicarla con un enlace. El camino más sencillo es Netlify Drop: se arrastra la carpeta `salidas/revision` y da el enlace, sin instalar nada (guía, «Publicar la página»). Si el equipo ya usa la terminal, puedes publicarla tú en Firebase Hosting, que tiene un plan gratis sin tarjeta. Pide que abran el enlace en el teléfono y comprueben que se vean las piezas antes de mandárselo a la institución.
+Copia las imágenes y videos a `salidas/revision/piezas/`. Para que la página cargue rápido en el teléfono y se pueda subir sin problemas, deja cada video en 720 píxeles de ancho o menos y por debajo de 10 MB; si tienes ffmpeg, comprímelo. Al final, la carpeta `salidas/revision` tiene `index.html` y la subcarpeta `piezas/`: esa carpeta completa es la que se sube.
 
-### 6. Guía la programación
+Después, explica cómo publicarla con un enlace. El camino más sencillo es Netlify Drop: se arrastra la carpeta `salidas/revision` y da el enlace, sin instalar nada (guía, «Publicar la página»). Pide que abran el enlace en el teléfono y comprueben que se vean las piezas antes de mandárselo a la institución.
 
-Explica cómo dejar cada publicación programada en Meta Business Suite o en Metricool (guía, «Programar»). Lo que no se puede programar, como un mensaje en un grupo de WhatsApp, queda en el calendario con el nombre de quién lo hace.
+### 6. Programa las publicaciones
+
+Hay tres formas (guía, «Programar»): en cada red por separado, desde una aplicación como Metricool o Buffer, o con un conector MCP. Si el entorno tiene conectado el servidor MCP de Metricool o de Buffer, puedes programar tú las publicaciones del calendario que la institución ya aprobó, con su pieza, su texto y su hora. Antes, muestra la lista de lo que vas a programar y espera el sí del equipo. Después, entrega el enlace de cada publicación para revisarla. Si no hay conector, explica cómo hacerlo a mano. Lo que no se puede programar, como un mensaje en un grupo de WhatsApp, queda en el calendario con el nombre de quién lo hace.
 
 ### 7. Guarda las salidas
 
@@ -72,4 +74,4 @@ En `salidas/`:
 
 ### 8. Itera
 
-Acepta ajustes como «muévelo al lunes» o «hazlo más corto para historias». Cuando la institución pida cambios en una pieza, actualiza la página y vuelve a publicarla en el mismo enlace.
+Acepta ajustes como «muévelo al lunes» o «hazlo más corto para historias». Cuando la institución pida cambios en una pieza, actualiza la página y vuelve a subirla al mismo sitio, para que el enlace no cambie.

@@ -25,7 +25,7 @@ contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
         ↓ (con el storyboard aprobado)
 animatic-intervencion    → video de prueba con fotogramas a color y voz en off
         ↓
-publicacion-intervencion → canales, calendario, textos por red y página de revisión con enlace
+publicacion-intervencion → canales, calendario, textos por red y página con las piezas, enlace y programación
 ```
 
 | Skill | Qué hace |
@@ -35,7 +35,7 @@ publicacion-intervencion → canales, calendario, textos por red y página de re
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
-| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red y crea una página de revisión con un enlace para que la institución apruebe las piezas |
+| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones, también con un conector MCP |
 
 ## Cómo instalarlas
 
