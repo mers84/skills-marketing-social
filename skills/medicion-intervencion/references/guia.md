@@ -42,3 +42,14 @@ La aplicación de Instagram en el teléfono no exporta datos. En Instagram las e
 - Tres o cuatro números, al menos uno de conducta.
 - Cada número con su meta y la decisión que permite tomar. Si no lleva a ninguna decisión, sobra.
 - Pensado para quien lo va a ver: a la institución le importa cuántas personas hicieron la conducta.
+
+## Compartir el panel
+
+Igual que la página de revisión de `publicacion-intervencion` (su guía, «Publicar la página»):
+
+1. Crear una cuenta gratis en [Netlify](https://app.netlify.com/signup). Sin cuenta, el sitio se borra a las pocas horas.
+2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/panel` completa.
+3. Da un enlace del tipo `nombre-al-azar.netlify.app`; el nombre se puede cambiar en la configuración del sitio.
+4. Para actualizar, se arrastra de nuevo la carpeta en la sección de despliegues del mismo sitio, y el enlace queda igual.
+
+Si el panel lleva datos de personas, aunque sean conteos, recuerda que quien tenga el enlace lo puede ver.

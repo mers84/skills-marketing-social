@@ -73,7 +73,7 @@ npx skills add mers84/skills-marketing-social
 /medicion-intervencion Con la audiencia, la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
 ```
 
-Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.
+Los resultados quedan en `salidas/`. Las hojas salen en HTML; las de audiencia, estrategia y contenido, también en PDF. La página de revisión de las piezas y el panel de medición quedan como carpetas listas para subir a Netlify Drop y compartir con un enlace.
 
 ## Límites
 

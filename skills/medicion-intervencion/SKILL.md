@@ -57,7 +57,9 @@ Lee también `datos/conteo.csv`. Resume qué subió, qué bajó y qué conviene 
 
 ### 4. Crea el panel
 
-Crea `salidas/panel/index.html`: una página que se abre sin servidor, con un gráfico por número elegido (tres o cuatro, al menos uno de conducta), semana a semana, con la meta marcada y, al lado, la decisión que sugiere. Pon los datos dentro de la página. Si son de ejemplo, escribe arriba, visible, que son ficticios. Explica cómo publicarla con Netlify Drop, igual que la página de revisión de `publicacion-intervencion`.
+Crea la carpeta `salidas/panel/`, lista para Netlify Drop, con `index.html`: una página que se abre sin servidor, con un gráfico por número elegido (tres o cuatro, al menos uno de conducta), semana a semana, con la meta marcada y, al lado, la decisión que sugiere. Pon los datos dentro de la página, y que nada de lo que necesita quede fuera de la carpeta. Si los datos son de ejemplo, escribe arriba, visible, que son ficticios.
+
+No la subas tú. La sube el equipo, para que la institución vea el panel en el teléfono con un enlace: se arrastra la carpeta `salidas/panel` a Netlify Drop (guía, «Compartir el panel»). Cada semana, con los datos nuevos, actualizas la página y el equipo vuelve a arrastrar la carpeta al mismo sitio, para que el enlace no cambie.
 
 Después, compara cada número del panel con el archivo de donde salió y pide al equipo que lo revise también.
 
@@ -67,8 +69,7 @@ En `salidas/`:
 
 - `medicion.md`: los datos, con el formato de abajo.
 - `medicion.html`: la hoja del plan, a partir de [assets/hoja-medicion.html](assets/hoja-medicion.html). Crece según la información.
-- `medicion.pdf`: la misma hoja, generada desde el HTML con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados). Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF.
-- `panel/index.html`: el panel.
+- `panel/`: la carpeta del panel, lista para Netlify Drop.
 
 Y en `datos/`, los archivos de cada semana y `conteo.csv`.
 

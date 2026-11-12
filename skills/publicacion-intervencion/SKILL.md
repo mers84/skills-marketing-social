@@ -59,7 +59,7 @@ A partir de [assets/revision.html](assets/revision.html), crea `salidas/revision
 
 Copia las imágenes y videos a `salidas/revision/piezas/`. Para que la página cargue rápido en el teléfono y se pueda subir sin problemas, deja cada video en 720 píxeles de ancho o menos y por debajo de 10 MB; si tienes ffmpeg, comprímelo. Al final, la carpeta `salidas/revision` tiene `index.html` y la subcarpeta `piezas/`: esa carpeta completa es la que se sube.
 
-Después, explica cómo publicarla con un enlace. El camino más sencillo es Netlify Drop: se arrastra la carpeta `salidas/revision` y da el enlace, sin instalar nada (guía, «Publicar la página»). Pide que abran el enlace en el teléfono y comprueben que se vean las piezas antes de mandárselo a la institución.
+No la subas tú: tu trabajo es dejar la carpeta lista. La sube el equipo, y el camino más sencillo es Netlify Drop: se arrastra la carpeta `salidas/revision` y da un enlace, sin instalar nada (guía, «Publicar la página»). Explícales los pasos y pide que abran el enlace en el teléfono y comprueben que se vean las piezas antes de mandárselo a la institución.
 
 ### 6. Programa las publicaciones
 
@@ -71,9 +71,8 @@ En `salidas/`:
 
 - `publicacion.md`: canales, plan de cuenta, calendario y textos por red. Termina con la sección «Lo que pasa a la medición».
 - `publicacion.html`: la hoja, a partir de [assets/hoja-publicacion.html](assets/hoja-publicacion.html). Crece según la información.
-- `publicacion.pdf`: la misma hoja, generada desde el HTML con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados). Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF.
 - `calendario.csv`: el calendario, para abrir en Google Sheets.
-- `revision/index.html`: la página de revisión, con sus piezas en `revision/piezas/`.
+- `revision/`: la carpeta lista para Netlify Drop, con `index.html` y las piezas en `piezas/`.
 
 `publicacion.md` termina así, para la skill `medicion-intervencion`:
 
