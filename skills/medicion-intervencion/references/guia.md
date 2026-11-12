@@ -27,7 +27,7 @@ La meta dice cuántas personas harán la conducta y para cuándo, y necesita un 
 Para atribuir un cambio a la campaña:
 
 - **Si la conducta ya existe sin la campaña** (reciclar, vacunarse): cuenta el número de partida antes de lanzar y pregunta «¿viste la campaña?» a quienes hicieron la conducta.
-- **Si la conducta la crea la campaña** (una actividad nueva, dirigida por alguien): el número de partida será casi cero, pero igual se cuenta, y se anota qué hace hoy la gente en ese momento, porque esa es la competencia. La pregunta útil es qué parte de la campaña funcionó: compara lugares con y sin cada acción, y usa un código distinto por pieza.
+- **Si la conducta la crea la campaña** (una actividad nueva, dirigida por alguien): el número de partida es cero y se escribe así; no hace falta contarlo. Cada vez que ocurre es efecto de la campaña. La pregunta útil es qué parte funcionó: compara lugares con y sin cada acción, y usa un código distinto por pieza.
 - **En los dos casos**, cuenta de nuevo unas semanas después de retirar la acción que la impulsa, para saber si la conducta se sostiene.
 
 Anota lo que también pudo influir: exámenes, feriados, otras actividades.
