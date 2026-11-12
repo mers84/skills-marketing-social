@@ -15,11 +15,12 @@ description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Prepara y
    - `publicacion.md`: los canales, el calendario y la sección «Lo que pasa a la medición».
 
    Si faltan, sugiere correr las skills anteriores, o pide al menos la conducta, la meta y las piezas con su canal.
-2. **La conducta manda.** Los me gusta, los seguidores y las visualizaciones son métricas de vanidad si se miran solas: dicen que la pieza llegó, no que alguien cambió. Todo plan incluye al menos un número de conducta.
-3. **Dos capas.** Lo que pasa en las redes se lee en sus estadísticas. Lo que pasa en persona se cuenta en el lugar. Ninguna red da el segundo número.
-4. **No pidas pasos sin beneficio.** No propongas que la persona marque «lo hice» en una página. Mide a través de algo que ya hace para cumplir la conducta: el video que abre un código, la pausa a hora fija que alguien dirige.
-5. **No inventes datos.** Si falta el punto de partida o la meta, márcalo como `falta` y propone cómo conseguirlo. Si el equipo pide datos de ejemplo para una demostración, márcalos como ficticios en el propio panel.
-6. **Cuida los datos.** Los conteos no llevan nombres ni datos que identifiquen a las personas.
+2. **No todo es contenido.** La estrategia combina publicaciones con acciones en persona: un afiche, una actividad dirigida, un compromiso firmado. Mide las dos partes: la digital, que dan las redes, y la física, que se cuenta donde ocurre la conducta.
+3. **La conducta manda.** Los me gusta, los seguidores y las visualizaciones son métricas de vanidad si se miran solas: dicen que la pieza llegó, no que alguien cambió. Todo plan incluye al menos un número de conducta.
+4. **Dos capas.** Lo que pasa en las redes se lee en sus estadísticas. Lo que pasa en persona se cuenta en el lugar. Ninguna red da el segundo número.
+5. **No pidas pasos sin beneficio.** No propongas que la persona marque «lo hice» en una página. Mide a través de algo que ya hace para cumplir la conducta: el video que abre un código, la pausa a hora fija que alguien dirige.
+6. **No inventes datos.** Si falta el punto de partida o la meta, márcalo como `falta` y propone cómo conseguirlo. Si el equipo pide datos de ejemplo para una demostración, márcalos como ficticios en el propio panel.
+7. **Cuida los datos.** Los conteos no llevan nombres ni datos que identifiquen a las personas.
 
 ## Antes de empezar
 
@@ -44,7 +45,9 @@ Escribe los cuatro pasos entre ver una pieza y hacer la conducta, y qué número
 
 Agrega la lista de lo que hay que dejar listo antes de lanzar, con responsable y fecha: el número de partida, lo que abre cada código o enlace, un código por pieza o lugar y la cuenta con estadísticas activas. Si `publicacion.md` ya dice cómo se cuenta cada pieza, úsalo; si no, propónlo.
 
-Copia [assets/conteo.csv](assets/conteo.csv) a `datos/conteo.csv` para el conteo en persona, y [assets/escaneos.csv](assets/escaneos.csv) a `datos/escaneos.csv` si hay códigos QR o enlaces propios.
+Copia [assets/conteo.csv](assets/conteo.csv) a `datos/conteo.csv` para el conteo en persona, [assets/escaneos.csv](assets/escaneos.csv) a `datos/escaneos.csv` si hay códigos QR o enlaces propios, y [assets/compromisos.csv](assets/compromisos.csv) a `datos/compromisos.csv` si la estrategia pide un compromiso firmado.
+
+Si la estrategia no tiene un primer paso que se pueda contar, propone un compromiso (guía, «El compromiso»): es un incentivo según el libro y, además, cada firma se cuenta.
 
 ### 3. Junta los datos de la semana
 
@@ -55,7 +58,7 @@ Hay dos formas (guía, «Traer los datos»):
 
 Los escaneos de un código QR quedan en el sitio que lo creó: alguien los copia cada semana en `datos/escaneos.csv`, un número por código. Si la página que abre el código es propia, también puede contar sus visitas con un pequeño código y avisar, por ejemplo, a un canal de Telegram; menciónalo como opción.
 
-Lee también `datos/conteo.csv` y `datos/escaneos.csv`. Resume qué subió, qué bajó y qué conviene corregir. Si un número no se mueve en dos semanas, sugiere cambiar una sola cosa.
+Lee también `datos/conteo.csv`, `datos/escaneos.csv` y `datos/compromisos.csv`. Resume qué subió, qué bajó y qué conviene corregir. Si un número no se mueve en dos semanas, sugiere cambiar una sola cosa.
 
 ### 4. Crea el panel
 

@@ -21,10 +21,18 @@ La meta dice cuántas personas harán la conducta y para cuándo, y necesita un 
 
 1. **La vio**: alcance (personas distintas) y visualizaciones (veces que se vio).
 2. **Le interesó**: guardados, compartidos, comentarios, preguntas.
-3. **Dio un primer paso**: escaneos de un código o clics en un enlace, distinto por pieza o lugar. El código tiene que abrir algo que la persona usa para hacer la conducta. Un código QR dinámico deja cambiar el destino sin reimprimirlo y cuenta los escaneos.
+3. **Dio un primer paso**: escaneos de un código, clics en un enlace o firmas de un compromiso, distinto por pieza o lugar. El código tiene que abrir algo que la persona usa para hacer la conducta. Un código QR dinámico deja cambiar el destino sin reimprimirlo y cuenta los escaneos.
 4. **Hizo la conducta**: se cuenta en el lugar. Una conducta a hora fija y con alguien que la dirige es más fácil de contar.
 
 Para atribuir un cambio a la campaña: un número de partida contado antes de lanzar y la pregunta «¿viste la campaña?» a quienes hicieron la conducta. Anota lo que también pudo influir: exámenes, feriados, otras actividades.
+
+## El compromiso
+
+Lee y Kotler llaman compromiso (*pledge*) a una promesa explícita: firmar un papel, marcar una casilla o decir que sí delante de otros. Lo tratan como un incentivo no monetario: quien acepta algo pequeño tiende a cumplir lo grande (cap. 11, PDF pp. 369-372; cap. 17, p. 588). Cada firma se puede contar, sin teléfono.
+
+Pautas de Doug McKenzie-Mohr que cita el libro (p. 588): que sea público, que se pida en grupo, que la persona haga la actividad una vez al comprometerse y que se pida en un lugar donde ya hay contacto.
+
+Caso del capítulo 15, In Motion (King County Metro, Seattle; PDF pp. 533-536): metas de inscribir a 1.000 dueños de carro, que el 75 % firmara el compromiso de manejar menos solo y bajar un 10 % esos viajes. Resultado: 1.874 inscritos, 91 % firmó; solo 22,7 % anotó sus viajes cada semana, aun con sorteo; una encuesta final midió el cambio. Lo que enseña: el compromiso se cuenta fácil, pero pedir que la persona reporte la conducta da pocos datos. La conducta se cuenta en el lugar.
 
 ## Traer los datos
 
