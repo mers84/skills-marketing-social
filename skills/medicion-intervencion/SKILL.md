@@ -44,7 +44,7 @@ Escribe los cuatro pasos entre ver una pieza y hacer la conducta, y qué número
 
 Agrega la lista de lo que hay que dejar listo antes de lanzar, con responsable y fecha: el número de partida, lo que abre cada código o enlace, un código por pieza o lugar y la cuenta con estadísticas activas. Si `publicacion.md` ya dice cómo se cuenta cada pieza, úsalo; si no, propónlo.
 
-Copia [assets/conteo.csv](assets/conteo.csv) a `datos/conteo.csv` para el conteo en persona.
+Copia [assets/conteo.csv](assets/conteo.csv) a `datos/conteo.csv` para el conteo en persona, y [assets/escaneos.csv](assets/escaneos.csv) a `datos/escaneos.csv` si hay códigos QR o enlaces propios.
 
 ### 3. Junta los datos de la semana
 
@@ -53,7 +53,9 @@ Hay dos formas (guía, «Traer los datos»):
 - **Descargar el archivo de cada red** y guardarlo en `datos/` con la fecha en el nombre. Explica dónde está el botón en cada red.
 - **Con el conector MCP de Metricool**, si el entorno lo tiene: consulta las estadísticas de la última semana de las redes conectadas y guárdalas en `datos/AAAA-MM-DD_redes.csv`. Metricool solo trae los números; el análisis lo haces tú. El plan gratis guarda 30 días: avisa si hay semanas sin bajar.
 
-Lee también `datos/conteo.csv`. Resume qué subió, qué bajó y qué conviene corregir. Si un número no se mueve en dos semanas, sugiere cambiar una sola cosa.
+Los escaneos de un código QR quedan en el sitio que lo creó: alguien los copia cada semana en `datos/escaneos.csv`, un número por código. Si la página que abre el código es propia, también puede contar sus visitas con un pequeño código y avisar, por ejemplo, a un canal de Telegram; menciónalo como opción.
+
+Lee también `datos/conteo.csv` y `datos/escaneos.csv`. Resume qué subió, qué bajó y qué conviene corregir. Si un número no se mueve en dos semanas, sugiere cambiar una sola cosa.
 
 ### 4. Crea el panel
 

@@ -34,6 +34,8 @@ Para atribuir un cambio a la campaña: un número de partida contado antes de la
 | TikTok Studio | En la computadora, en estadísticas, descargar datos | Paso tomado de guías de usuarios; comprobarlo |
 | YouTube Studio | Exportar la vista de estadísticas a Google Sheets o CSV | Paso tomado de guías de usuarios; comprobarlo |
 | Conector MCP de Metricool | El agente consulta las estadísticas de las redes conectadas ([ayuda de Metricool](https://help.metricool.com/es/limites-del-mcp-y-requisitos-del-plan-h72jg)). Es el mismo que usa `publicacion-intervencion` para programar | Funciona con el plan gratis; ese plan guarda 30 días |
+| Sitio del código QR dinámico | Se copia cada semana el número de escaneos de cada código en `datos/escaneos.csv` | Los escaneos no salen del sitio solos |
+| Página propia que abre el código | Un pequeño código en la página anota cada visita y puede avisar, por ejemplo, a un canal de Telegram | Hay que programarlo aparte |
 
 La aplicación de Instagram en el teléfono no exporta datos. En Instagram las estadísticas solo existen en las cuentas profesionales.
 
@@ -42,6 +44,12 @@ La aplicación de Instagram en el teléfono no exporta datos. En Instagram las e
 - Tres o cuatro números, al menos uno de conducta.
 - Cada número con su meta y la decisión que permite tomar. Si no lleva a ninguna decisión, sobra.
 - Pensado para quien lo va a ver: a la institución le importa cuántas personas hicieron la conducta.
+
+Tres trampas al leer los datos:
+
+- **El alcance no se suma entre publicaciones.** La misma persona puede haber visto varias; sumarlas cuenta gente de más. Para la campaña completa, usa el alcance de la cuenta en el periodo, o muestra cada publicación por separado.
+- **Los archivos semanales suelen traer el total acumulado** de cada publicación desde que salió. Para saber lo de la semana, resta la semana anterior.
+- **La meta y el conteo, en la misma unidad.** Si la meta habla de estudiantes distintos y el conteo suma veces, no se pueden comparar. Ajusta uno de los dos y dilo.
 
 ## Compartir el panel
 
