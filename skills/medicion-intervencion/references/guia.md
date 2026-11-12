@@ -21,7 +21,7 @@ La meta dice cuántas personas harán la conducta y para cuándo, y necesita un 
 
 1. **La vio**: alcance (personas distintas) y visualizaciones (veces que se vio).
 2. **Le interesó**: guardados, compartidos, comentarios, preguntas.
-3. **Dio un primer paso**: escaneos de un código, clics en un enlace o firmas de un compromiso, distinto por pieza o lugar. El código tiene que abrir algo que la persona usa para hacer la conducta. Un código QR dinámico deja cambiar el destino sin reimprimirlo y cuenta los escaneos.
+3. **Dio un primer paso**: escaneos de un código, clics en un enlace o compromisos (una firma, una mano levantada, un sí), distinto por pieza o lugar. El código tiene que abrir algo que la persona usa para hacer la conducta. Un código QR dinámico deja cambiar el destino sin reimprimirlo y cuenta los escaneos.
 4. **Hizo la conducta**: se cuenta en el lugar. Una conducta a hora fija y con alguien que la dirige es más fácil de contar.
 
 Para atribuir un cambio a la campaña:
@@ -34,7 +34,7 @@ Anota lo que también pudo influir: exámenes, feriados, otras actividades.
 
 ## El compromiso
 
-Lee y Kotler llaman compromiso (*pledge*) a una promesa explícita: firmar un papel, marcar una casilla o decir que sí delante de otros. Lo tratan como un incentivo no monetario: quien acepta algo pequeño tiende a cumplir lo grande (cap. 11, PDF pp. 369-372; cap. 17, p. 588). Cada firma se puede contar, sin teléfono.
+Lee y Kotler llaman compromiso (*pledge*) a una promesa explícita: firmar un papel, marcar una casilla o decir que sí delante de otros. Lo tratan como un incentivo no monetario: quien acepta algo pequeño tiende a cumplir lo grande (cap. 11, PDF pp. 369-372; cap. 17, p. 588). No tiene que ser escrito: McKenzie-Mohr distingue compromisos verbales, escritos, públicos y duraderos (PDF pp. 369-370). Cada compromiso se puede contar, sin teléfono.
 
 Pautas de Doug McKenzie-Mohr que cita el libro (p. 588): que sea público, que se pida en grupo, que la persona haga la actividad una vez al comprometerse y que se pida en un lugar donde ya hay contacto.
 
