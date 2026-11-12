@@ -26,6 +26,8 @@ contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
 animatic-intervencion    → video de prueba con fotogramas a color y voz en off
         ↓
 publicacion-intervencion → canales, calendario, textos por red y página con las piezas, enlace y programación
+        ↓
+medicion-intervencion    → plan de medición, datos de cada semana y panel
 ```
 
 | Skill | Qué hace |
@@ -36,6 +38,7 @@ publicacion-intervencion → canales, calendario, textos por red y página con l
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
 | [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones, también con un conector MCP |
+| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Arma el plan de medición desde la estrategia, con un número cerca de la conducta y el número de partida; junta los datos de cada semana de las redes, también con el conector MCP de Metricool, y del conteo en persona; y crea un panel con gráficos en una página web |
 
 ## Cómo instalarlas
 
@@ -67,6 +70,7 @@ npx skills add mers84/skills-marketing-social
 /estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
 /contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
 /publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página de revisión para la institución.
+/medicion-intervencion Con la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
 ```
 
 Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.
