@@ -1,6 +1,6 @@
 # Skills de marketing social
 
-Skills de IA para diseñar campañas de cambio de conducta, de la investigación de la audiencia al contenido, para cualquier proyecto.
+Skills de IA para diseñar campañas de cambio de conducta, de la investigación de la audiencia a la medición, para cualquier proyecto.
 
 **Están basadas en la bibliografía de Lee y Kotler (2020), *Social Marketing: Behavior Change for Social Good*, 6.ª ed.** Sus conceptos, pasos y tácticas salen de ese libro, con capítulo y página.
 
@@ -37,8 +37,8 @@ medicion-intervencion    → plan de medición, datos de cada semana y panel
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
-| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones, también con un conector MCP |
-| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Arma el plan de medición desde la estrategia, con un número cerca de la conducta y el número de partida; junta los datos de cada semana de las redes, también con el conector MCP de Metricool, y del conteo en persona; y crea un panel con gráficos en una página web |
+| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red, crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
+| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia; junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona; y crea un panel con gráficos en una página web |
 
 ## Cómo instalarlas
 
@@ -70,7 +70,7 @@ npx skills add mers84/skills-marketing-social
 /estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
 /contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
 /publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página de revisión para la institución.
-/medicion-intervencion Con la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
+/medicion-intervencion Con la audiencia, la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
 ```
 
 Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF.

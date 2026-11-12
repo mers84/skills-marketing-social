@@ -98,3 +98,5 @@ En `salidas/`:
 ### 8. Itera y prepara la prueba
 
 Acepta ajustes como «hazlo más corto» o «que suene como hablan aquí». Antes de publicar, propone dos o tres preguntas para probar la pieza con personas de la audiencia: qué entendieron, qué creen que se les pide y qué les molestó (cap. 13, pp. 443-445).
+
+Con las piezas listas, el paso siguiente es `publicacion-intervencion`: canales, calendario, aprobación de la institución y programación.

@@ -9,7 +9,7 @@ Parte de lo que dejaron las skills anteriores y llega a una campaña lista para 
 
 ## Reglas
 
-1. **Parte de lo que ya existe.** Busca `salidas/audiencia.md`, `salidas/estrategia.md` y `salidas/contenido.md`. Si faltan, sugiere correr `audiencia-intervencion`, `estrategia-intervencion` y `contenido-intervencion`, o pide al menos la audiencia, la conducta, las aperturas y la lista de piezas.
+1. **Parte de lo que ya existe.** Busca `salidas/audiencia.md` (o `salidas/perfil.md`, el nombre anterior), `salidas/estrategia.md` y `salidas/contenido.md`. Del brief de la estrategia salen las aperturas y las piezas; del contenido, las piezas elegidas y sus textos. Si faltan, sugiere correr `audiencia-intervencion`, `estrategia-intervencion` y `contenido-intervencion`, o pide al menos la audiencia, la conducta, las aperturas y la lista de piezas.
 2. **No todo es redes.** La estrategia puede tener acciones en persona: un afiche, una charla, una mesa. Van en el mismo calendario que las publicaciones.
 3. **La institución decide.** Ninguna pieza se publica sin su aprobación. La página de revisión sirve para eso.
 4. **No inventes datos de audiencia.** Si propones una red, di en qué te basas: lo que dijo la audiencia, lo que tiene la institución o el tamaño estimado que el equipo vio en una herramienta de anuncios. Si no hay dato, márcalo como supuesto.
@@ -40,13 +40,14 @@ Pregunta desde qué cuenta se va a publicar y explica los tres planes de la guí
 
 Crea una fila por acción, sea una publicación o algo en persona:
 
-| Fecha y hora | Tipo | Canal o lugar | Pieza o acción | Qué le pide a la persona | Por qué en esa fecha | Quién la aprueba | Quién la publica o la hace |
-|---|---|---|---|---|---|---|---|
+| Fecha y hora | Tipo | Canal o lugar | Pieza o acción | Qué le pide a la persona | Por qué en esa fecha | Cómo se va a contar | Quién la aprueba | Quién la publica o la hace |
+|---|---|---|---|---|---|---|---|---|
 
 - Empieza por las fechas en que la audiencia puede actuar.
 - Ordena en tres momentos: presentar la causa, mostrar cómo se participa y pedir que dé el paso.
 - Cuenta en las fechas los días que tarda la institución en aprobar.
 - Si de una pieza salen varias versiones, cada versión es una fila.
+- En «Cómo se va a contar», di de dónde saldrá su número: las estadísticas de la red, un código o enlace propio de esa pieza, o un conteo en persona. Si una pieza lleva código QR, que abra algo que la persona use para hacer la conducta.
 
 ### 4. Adapta los textos a cada red
 
@@ -68,10 +69,25 @@ Hay tres formas (guía, «Programar»): en cada red por separado, desde una apli
 
 En `salidas/`:
 
-- `publicacion.md`: canales, plan de cuenta, calendario y textos por red.
+- `publicacion.md`: canales, plan de cuenta, calendario y textos por red. Termina con la sección «Lo que pasa a la medición».
+- `publicacion.html`: la hoja, a partir de [assets/hoja-publicacion.html](assets/hoja-publicacion.html). Crece según la información.
+- `publicacion.pdf`: la misma hoja, generada desde el HTML con Chrome o Edge en modo sin ventana (`--headless --print-to-pdf`, sin encabezados). Si no puedes, indica que se abra el HTML y se use Imprimir > Guardar como PDF.
 - `calendario.csv`: el calendario, para abrir en Google Sheets.
 - `revision/index.html`: la página de revisión, con sus piezas en `revision/piezas/`.
+
+`publicacion.md` termina así, para la skill `medicion-intervencion`:
+
+```markdown
+## Lo que pasa a la medición
+- Conducta y meta (de la hoja de la audiencia):
+- Piezas, canal y fecha:
+- Cómo se cuenta cada pieza (estadísticas, código o enlace, conteo en persona):
+- Cuenta desde donde se leerán las estadísticas, y si es profesional:
+- Conector MCP conectado (Metricool, Buffer o ninguno):
+```
 
 ### 8. Itera
 
 Acepta ajustes como «muévelo al lunes» o «hazlo más corto para historias». Cuando la institución pida cambios en una pieza, actualiza la página y vuelve a subirla al mismo sitio, para que el enlace no cambie.
+
+Antes de lanzar, sugiere correr `medicion-intervencion` para dejar listo el número de partida y los códigos que se van a contar: lo que no se prepara antes no se puede medir después.
