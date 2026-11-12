@@ -24,7 +24,13 @@ La meta dice cuántas personas harán la conducta y para cuándo, y necesita un 
 3. **Dio un primer paso**: escaneos de un código, clics en un enlace o firmas de un compromiso, distinto por pieza o lugar. El código tiene que abrir algo que la persona usa para hacer la conducta. Un código QR dinámico deja cambiar el destino sin reimprimirlo y cuenta los escaneos.
 4. **Hizo la conducta**: se cuenta en el lugar. Una conducta a hora fija y con alguien que la dirige es más fácil de contar.
 
-Para atribuir un cambio a la campaña: un número de partida contado antes de lanzar y la pregunta «¿viste la campaña?» a quienes hicieron la conducta. Anota lo que también pudo influir: exámenes, feriados, otras actividades.
+Para atribuir un cambio a la campaña:
+
+- **Si la conducta ya existe sin la campaña** (reciclar, vacunarse): cuenta el número de partida antes de lanzar y pregunta «¿viste la campaña?» a quienes hicieron la conducta.
+- **Si la conducta la crea la campaña** (una actividad nueva, dirigida por alguien): el número de partida será casi cero, pero igual se cuenta, y se anota qué hace hoy la gente en ese momento, porque esa es la competencia. La pregunta útil es qué parte de la campaña funcionó: compara lugares con y sin cada acción, y usa un código distinto por pieza.
+- **En los dos casos**, cuenta de nuevo unas semanas después de retirar la acción que la impulsa, para saber si la conducta se sostiene.
+
+Anota lo que también pudo influir: exámenes, feriados, otras actividades.
 
 ## El compromiso
 
