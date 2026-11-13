@@ -39,6 +39,21 @@ medicion-intervencion    → plan de medición, datos de cada semana y panel web
 | [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona y adapta los textos a cada red. Crea una página web con el calendario, donde la institución abre cada pieza y deja su comentario, saca su PDF y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
 | [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia. Junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona. Crea un panel con gráficos en una página web, al estilo de un tablero de Looker Studio, y su PDF |
 
+## Qué necesita cada skill
+
+Cada skill lee lo que dejó la anterior en la carpeta `salidas/` del proyecto. Si no lo encuentra, pide lo mínimo para arrancar.
+
+| Skill | Lo que lee | Si falta, pide al menos | Lo que deja |
+|---|---|---|---|
+| `audiencia-intervencion` | El informe, las entrevistas o transcripciones y las notas de investigación, en la carpeta del proyecto | Que le indiquen dónde están los archivos | `audiencia.md` y la hoja de la audiencia |
+| `estrategia-intervencion` | `salidas/audiencia.md` | La audiencia, la conducta y al menos una barrera | `estrategia.md` con el brief, y la hoja |
+| `contenido-intervencion` | `audiencia.md` y `estrategia.md` | La audiencia, la conducta, la promesa y su respaldo | `contenido.md` con las ideas, el storyboard y el plan de edición |
+| `animatic-intervencion` | `contenido.md` con el storyboard aprobado. Para la voz, una clave en `claves-voz.env` | No arranca sin el storyboard aprobado. Sin clave, sigue y entrega el video sin voz generada | El video de prueba |
+| `publicacion-intervencion` | `audiencia.md`, `estrategia.md` y `contenido.md`, más las imágenes y los videos de las piezas | La audiencia, la conducta, las aperturas y la lista de piezas | `publicacion.md`, `calendario.csv`, la hoja y la página del calendario con su PDF |
+| `medicion-intervencion` | `audiencia.md`, `estrategia.md` y `publicacion.md`, más los datos en `datos/`: el archivo de estadísticas que se baja de Meta Business Suite y los conteos en persona (`conteo.csv`, `escaneos.csv`, `compromisos.csv`) | La conducta, la meta y las piezas con su canal | `medicion.md`, la hoja y el panel con su PDF |
+
+Si una pieza todavía no existe, el calendario igual sale y muestra un recuadro en su lugar. Mientras no haya datos reales, el kit de Actívate trae los archivos de `datos/` con datos ficticios.
+
 ## Qué skill usa cada exposición
 
 | Exposición | Tema | Skills | Lo que se muestra |
