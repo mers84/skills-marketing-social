@@ -30,7 +30,8 @@ body{background:var(--fondo);color:var(--tinta);font:15px/1.45 "Segoe UI",Roboto
 .barra .acc{display:flex;gap:8px}
 .btn{border:1px solid var(--verde);background:var(--verde);color:#fff;font:600 13px/1 inherit;font-family:inherit;padding:9px 14px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
 .btn.sec{background:#fff;color:var(--verde)}
-main{max-width:1240px;margin:auto;padding:20px 24px 48px;display:grid;gap:18px}
+main{max-width:1240px;margin:auto;padding:20px 24px 48px}
+#vpie{display:grid;gap:18px}
 .ficticio{background:var(--amarillo);font-weight:700;text-align:center;padding:9px 14px;border-radius:6px}
 .caja{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:16px 18px;min-width:0}
 h2{margin:0 0 6px;font-size:17px;line-height:1.25}
@@ -93,7 +94,36 @@ textarea{min-height:90px;resize:vertical}
 .aviso{font-size:13px;padding:8px 10px;border-radius:6px;background:var(--verde-suave);color:var(--verde-2)}
 .aviso.error{background:#fbe3e1;color:#8f2a1f}
 footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* Vistas: Calendario ocupa la pantalla (16:9) para proyectarlo; Piezas es la página para revisar y aprobar. */
+.vistas{display:inline-flex;border:1px solid var(--verde);border-radius:6px;overflow:hidden}
+.vistas button{all:unset;cursor:pointer;font:600 13px/1 inherit;font-family:inherit;padding:9px 14px;color:var(--verde)}
+.vistas button[aria-pressed=true]{background:var(--verde);color:#fff}
+body.v-cal #vpie,body.v-pie #vcal{display:none}
+body.v-cal{height:100vh;display:flex;flex-direction:column;overflow:hidden}
+body.v-cal main{max-width:none;padding:14px 18px;flex:1;min-height:0;display:flex;flex-direction:column}
+#vcal{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:12px}
+.vc-top{display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap}
+.vc-top .ficticio{padding:5px 12px;font-size:13px;flex:1}
+.vc-top .tip{font-size:12.5px;color:var(--gris)}
+.vc-cal{display:flex;flex-direction:column;min-height:0;padding:12px 14px}
+.vc-cal h3{margin:0 0 8px;font-size:15px}
+.vc-cal .grilla{flex:1;min-height:0;grid-template-rows:auto;grid-auto-rows:minmax(0,1fr)}
+.vc-cal .dia{min-height:0;overflow:hidden;gap:5px;padding:6px}
+.vc-cal .dia .n{font-size:13px}
+.vc-cal .ev{font-size:clamp(12px,1.05vw,16px);padding:6px 8px;line-height:1.25}
+.vc-cal .ev small{font-size:clamp(10.5px,.85vw,13px)}
+.vc-cal .ev .t{-webkit-line-clamp:3}
+.ev .mini{display:none}
+.vc-cal .ev .mini{display:block;margin-top:6px;border-radius:4px;overflow:hidden}
+.vc-cal .ev .mini img{display:block;width:100%;height:clamp(36px,9vh,120px);object-fit:cover}
+.vc-pie{display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;font-size:13.5px;color:var(--gris);border-top:1px solid var(--linea);padding-top:8px}
+.vc-pie b{color:var(--tinta)}
+.vc-pie .leyenda{margin:0}
 @media screen and (max-width:820px){
+  body.v-cal{height:auto;display:block;overflow:visible}
+  body.v-cal main{display:block;padding:16px}
+  #vcal{display:grid;grid-template-rows:none}
+  .vc-cal .dia{min-height:62px}
   main{padding:16px}.barra{padding:12px 16px}
   .intro{grid-template-columns:minmax(0,1fr)}
   dialog{overflow:auto}
@@ -112,7 +142,13 @@ footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);paddin
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{background:#fff;font-size:12.5px}
   .barra .acc,.pieza .ver,dialog{display:none!important}
-  main{max-width:none;padding:10px 0 0;gap:12px}
+  main{max-width:none;padding:10px 0 0}
+  body.v-cal,body.v-pie{height:auto;display:block;overflow:visible}body.v-cal main,body.v-pie main{display:block}
+  body.v-cal #vpie,body.v-pie #vcal{display:grid}
+  #vcal{height:164mm;break-after:page}
+  #vcal .tip{display:none}
+  #vpie{gap:12px}
+  #vpie .mes{display:none}
   .barra{padding:6px 0 10px}
   .mes{break-inside:avoid}
   .dia{min-height:78px}
@@ -127,7 +163,7 @@ footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);paddin
 <header class="barra">
   <img src="logo-ucab.svg" alt="UCAB">
   <div class="tit"><h1 id="titulo">Calendario de la campaña</h1><p id="bajada"></p></div>
-  <div class="acc"><a class="btn sec" id="btn-pdf" hidden download>Descargar PDF</a><button class="btn" id="btn-imp" type="button">Guardar en PDF</button></div>
+  <div class="acc"><div class="vistas" role="group" aria-label="Vista"><button type="button" data-v="cal">Calendario</button><button type="button" data-v="pie">Piezas</button></div><a class="btn sec" id="btn-pdf" hidden download>Descargar PDF</a><button class="btn" id="btn-imp" type="button">Guardar en PDF</button></div>
 </header>
 <main id="app"></main>
 <dialog id="dlg"><div id="dlg-in"></div></dialog>
@@ -164,6 +200,8 @@ footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);paddin
   if(C.pdf){var bp=document.getElementById('btn-pdf');bp.href=C.pdf;bp.hidden=false}
   document.getElementById('btn-imp').onclick=function(){window.print()};
 
+  /* Miniatura de la pieza en la vista de calendario: la imagen o la portada del video. */
+  var mini=function(a){var f=a.archivo&&!esVideo(a.archivo)?a.archivo:a.portada;return f?'<span class="mini"><img src="'+esc(f)+'" alt="" loading="lazy"></span>':''};
   var nPub=acc.filter(function(a){return !persona(a)}).length,nPer=acc.length-nPub;
   var h='';
   if(C.ficticio)h+='<div class="ficticio">EJEMPLO · fechas y piezas de muestra para explicar el método, no es el calendario aprobado</div>';
@@ -182,11 +220,18 @@ footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);paddin
       var evs=acc.filter(function(a){return a.fecha===key});
       var etiqueta=(primero||d.getDate()===1)?d.getDate()+' '+MESES[d.getMonth()].slice(0,3):d.getDate();primero=false;
       g+='<div class="dia'+(evs.length?'':' fuera')+'"><span class="n">'+etiqueta+'</span>'
-        +evs.map(function(a){return '<button class="ev'+(persona(a)?' persona':'')+'" data-id="'+a.id+'" data-corto="'+esc(a.canal||a.titulo)+'" type="button"><small>'+esc((a.hora?a.hora+' · ':'')+(a.canal||''))+'</small><span class="t">'+esc(a.titulo)+'</span></button>'}).join('')+'</div>';
+        +evs.map(function(a){return '<button class="ev'+(persona(a)?' persona':'')+'" data-id="'+a.id+'" data-corto="'+esc(a.canal||a.titulo)+'" type="button"><small>'+esc((a.hora?a.hora+' · ':'')+(a.canal||''))+'</small><span class="t">'+esc(a.titulo)+'</span>'+mini(a)+'</button>'}).join('')+'</div>';
       d.setDate(d.getDate()+1);
     }
     var rango=ini.getDate()+' de '+MESES[ini.getMonth()]+' al '+fin.getDate()+' de '+MESES[fin.getMonth()]+' de '+fin.getFullYear();
     h+='<section class="caja mes"><h3 style="text-transform:none">Semanas de la campaña · '+rango+'</h3><div class="grilla">'+g+'</div></section>';
+    var vc='<section id="vcal"><div class="vc-top">'
+      +(C.ficticio?'<div class="ficticio">EJEMPLO · fechas y piezas de muestra</div>':'')
+      +'<span class="tip">Toque una acción para ver la pieza y comentarla · todas las piezas, en Piezas</span></div>'
+      +'<div class="caja vc-cal"><h3>Semanas de la campaña · '+rango+'</h3><div class="grilla">'+g+'</div></div>'
+      +'<div class="vc-pie"><div class="leyenda"><span><i style="background:var(--verde)"></i>Publicación en redes</span><span><i style="background:var(--azul-claro)"></i>Acción en persona</span></div>'
+      +'<span><b>'+nPub+'</b> publicaciones · <b>'+nPer+'</b> acciones en persona</span>'
+      +(C.aprobar_antes?'<span>Aprobar antes del <b>'+esc(C.aprobar_antes)+'</b></span>':'')+'</div></section>';
   }
 
   h+='<section class="salto"><h2 style="margin:6px 0 12px">Todas las piezas y acciones, en orden</h2><div class="lista">'
@@ -197,7 +242,15 @@ footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);paddin
       +(a.texto?'<p class="texto solo-imp">'+esc(a.texto)+'</p>':'')
       +'</div><button class="btn sec ver" data-id="'+a.id+'" type="button">Ver y comentar</button></article>'}).join('')+'</div></section>';
   h+='<footer><span>'+esc(C.equipo?'Preparado por '+C.equipo:'')+'. Ninguna pieza se publica sin la aprobación de la institución.</span><span>Marketing y Gestión de Causas Sociales · UCAB Guayana · Lee y Kotler (2020), cap. 14</span></footer>';
-  app.innerHTML=h;
+  app.innerHTML=(typeof vc==='string'?vc:'')+'<section id="vpie">'+h+'</section>';
+  var botones=document.querySelectorAll('.vistas button');
+  function vista(v){
+    document.body.className='v-'+v;
+    botones.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-v')===v))});
+    history.replaceState(null,'',v==='pie'?'#piezas':'#calendario');
+  }
+  botones.forEach(function(b){b.onclick=function(){vista(b.getAttribute('data-v'))}});
+  vista(location.hash==='#piezas'||(location.hash!=='#calendario'&&matchMedia('(max-width:820px)').matches)?'pie':'cal');
 
   /* Ventana con la pieza, sus datos y la cajita de comentarios. */
   var dlg=document.getElementById('dlg'),din=document.getElementById('dlg-in');

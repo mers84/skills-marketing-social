@@ -17,7 +17,7 @@
             Campos: columnas, filas.
   Campos comunes: titulo, subtitulo, capa ("conducta", "primer paso", "interés" o "vanidad"),
   decision (qué decidir con ese número), fuente (de qué archivo sale), nota, ancho ("completo" ocupa toda la fila),
-  tablero (true en los dos o tres gráficos que van en la vista de tablero; los kpi van siempre, hasta cinco).
+  tablero (true en los gráficos que van en la vista de tablero, hasta seis; los kpi van siempre, hasta seis).
 */
 window.PANEL = {
   proyecto: "Actívate",
@@ -43,6 +43,10 @@ window.PANEL = {
     { tipo: "kpi", capa: "primer paso", titulo: "Profesores que se comprometieron",
       valor: 2, de: 4, unidad: "profesores dirigen la pausa",
       fuente: "datos/compromisos.csv" },
+    { tipo: "kpi", capa: "conducta", titulo: "Se sostiene sin el profesor",
+      valor: 31, anterior: 44, anterior_texto: "diciembre, con el profesor", unidad: "estudiantes en S-11 y S-21, el 13/01",
+      decision: "Bajó casi un tercio cuando el profesor dejó de dirigirla. Pedir que alguien del salón la siga proponiendo.",
+      fuente: "datos/conteo.csv, 09/12 y 13/01" },
     { tipo: "kpi", capa: "vanidad", titulo: "Alcance del reel de la semana",
       valor: 1150, unidad: "cuentas vieron el reel con estudiantes",
       fuente: "datos/2026-12-13_instagram.csv" },
@@ -72,13 +76,13 @@ window.PANEL = {
       decision: "En los salones ya no hace falta el video: la pausa la dirige alguien. Poner más códigos en la biblioteca.",
       fuente: "datos/escaneos.csv" },
 
-    { tipo: "dona", capa: "primer paso", titulo: "Compromiso en el salón",
+    { tipo: "dona", capa: "primer paso", titulo: "Compromiso en el salón", tablero: true,
       subtitulo: "Manos levantadas el primer día, en 3 salones",
       partes: [{ nombre: "Se comprometieron", valor: 67 }, { nombre: "No levantaron la mano", valor: 22 }],
       decision: "Repetir el compromiso en S-12 ahora que el profesor la dirige.",
       fuente: "datos/compromisos.csv" },
 
-    { tipo: "embudo", titulo: "Del reel a la pausa, semana del 07 al 13/12",
+    { tipo: "embudo", titulo: "Del reel a la pausa, semana del 07 al 13/12", tablero: true,
       pasos: [
         { nombre: "La vio", valor: 1150, fuente: "Alcance del reel" },
         { nombre: "Le interesó", valor: 61, fuente: "Guardados y compartidos" },
@@ -88,7 +92,7 @@ window.PANEL = {
       nota: "Cada paso sale de una fuente distinta: no son las mismas personas pasando de un paso al otro, sino el tamaño de cada paso.",
       fuente: "Instagram, escaneos.csv y conteo.csv" },
 
-    { tipo: "barras", capa: "vanidad", titulo: "Alcance de cada publicación",
+    { tipo: "barras", capa: "vanidad", titulo: "Alcance de cada publicación", tablero: true,
       subtitulo: "No se suman: la misma persona pudo ver varias",
       etiquetas: ["Reel de presentación", "Video de la rutina", "Carrusel por qué 3 minutos", "Reel con estudiantes"],
       valores: [860, 640, 610, 1150],

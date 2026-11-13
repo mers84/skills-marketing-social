@@ -55,7 +55,12 @@ Por cada pieza y cada canal, escribe el texto que la acompaña, con el formato d
 
 ### 5. Crea la página del calendario y las piezas
 
-Es la página que la institución abre en el teléfono: el calendario de la campaña con la marca de la UCAB. Al tocar una acción se abre la pieza (el video o la imagen), su texto y una cajita para aprobarla o pedir cambios.
+Es una página con la marca de la UCAB y dos vistas, con los mismos datos:
+
+- **Calendario**, la que abre en la computadora: las semanas de la campaña ocupan la pantalla, sin desplazarse, para proyectarlas en una exposición o en una reunión. Cada acción muestra su hora, su canal y una miniatura de la pieza.
+- **Piezas**, la que abre en el teléfono: todas las piezas en orden, para que la institución las revise.
+
+En las dos, al tocar una acción se abre la pieza (el video o la imagen), su texto y una cajita para aprobarla o pedir cambios.
 
 **No escribas la página: copia la plantilla y llena sus datos.**
 
@@ -66,7 +71,7 @@ Es la página que la institución abre en el teléfono: el calendario de la camp
 
 **Los comentarios.** Si la página está en Netlify con la detección de formularios activada, cada comentario llega a la sección Forms del sitio, y Netlify puede mandarlo por correo (guía, «Recibir los comentarios»). Si no, el botón abre WhatsApp con el comentario escrito, cuando el equipo pone su número en `whatsapp`, o lo copia para pegarlo en un mensaje.
 
-**El PDF.** Saca `salidas/calendario/calendario.pdf` con el comando de «Sacar los PDF», en el paso 7, y pon `pdf: "calendario.pdf"` en `datos.js`: así la página muestra el botón «Descargar PDF». En el PDF salen el calendario y todas las piezas con su texto; los videos salen con su portada si tienen una en `portada`.
+**El PDF.** Saca `salidas/calendario/calendario.pdf` con el comando de «Sacar los PDF», en el paso 7, y pon `pdf: "calendario.pdf"` en `datos.js`: así la página muestra el botón «Descargar PDF». En el PDF sale el calendario en la primera página y después todas las piezas con su texto; los videos salen con su portada si tienen una en `portada`.
 
 No la subas tú: deja la carpeta `salidas/calendario` lista. La sube el equipo a Netlify Drop, arrastrando la carpeta completa, y da un enlace sin instalar nada (guía, «Publicar la página»). Pide que abran el enlace en el teléfono y comprueben que se vean las piezas antes de mandárselo a la institución.
 
