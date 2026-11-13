@@ -12,7 +12,7 @@ Es una receta de trabajo para un agente de IA, guardada en una carpeta. Le indic
 
 ## Las skills
 
-Funcionan en cadena: lo que sale de una es la entrada de la siguiente.
+Son seis y funcionan en cadena: lo que sale de una es la entrada de la siguiente. Cada exposición del curso explica un tramo de la cadena.
 
 ```text
 Informe y entrevistas
@@ -30,26 +30,27 @@ publicacion-intervencion → canales, calendario web con las piezas y comentario
 medicion-intervencion    → plan de medición, datos de cada semana y panel web con gráficos y PDF
 ```
 
-## Qué skill usa cada exposición
-
-| Exposición | Tema | Skills |
-|---|---|---|
-| Primera | La audiencia y la estrategia | `audiencia-intervencion`, `estrategia-intervencion` |
-| Segunda | Crear el contenido | `contenido-intervencion`, `animatic-intervencion` |
-| Tercera | Del contenido a la publicación | `publicacion-intervencion` |
-| Cuarta | De la publicación a la medición | `medicion-intervencion` |
-
-Para probar la cuarta sin datos reales está el kit de ejemplo de Actívate, con datos ficticios.
-
 | Skill | Qué hace |
 |---|---|
 | [`audiencia-intervencion`](skills/audiencia-intervencion/SKILL.md) | Ordena los hallazgos: conducta, etapa de cambio, barreras, beneficios, motivadores, competencia e influyentes. Marca qué es evidencia, qué es supuesto y qué falta |
 | [`estrategia-intervencion`](skills/estrategia-intervencion/SKILL.md) | Propone posicionamientos y acciones por los cuatro frentes de la balanza, y las combina en una sola estrategia |
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
-
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
-| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red, crea una página web con el calendario, donde la institución abre cada pieza y deja su comentario, saca el PDF y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
-| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia; junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona; y crea un panel con gráficos en una página web, al estilo de un tablero de Looker Studio, y su PDF |
+| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona y adapta los textos a cada red. Crea una página web con el calendario, donde la institución abre cada pieza y deja su comentario, saca su PDF y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
+| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia. Junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona. Crea un panel con gráficos en una página web, al estilo de un tablero de Looker Studio, y su PDF |
+
+## Qué skill usa cada exposición
+
+| Exposición | Tema | Skills | Lo que se muestra |
+|---|---|---|---|
+| Primera | La audiencia y la estrategia | `audiencia-intervencion` y `estrategia-intervencion` | La hoja de la audiencia prioritaria y la hoja de estrategia |
+| Segunda | Crear el contenido | `contenido-intervencion` y `animatic-intervencion` | Las ideas, el storyboard y el video de prueba |
+| Tercera | Del contenido a la publicación | `publicacion-intervencion` | La página del calendario con las piezas, con su enlace y su PDF |
+| Cuarta | De la publicación a la medición | `medicion-intervencion` | El plan de medición y el panel con gráficos, con su enlace y su PDF |
+
+Cada equipo usa las skills de su exposición. No hace falta correr las anteriores: si faltan sus salidas, la skill pide lo mínimo que necesita. Después, en las evaluaciones, cada equipo recorre la cadena completa con su propio proyecto.
+
+Las plantillas traen un ejemplo para ver cómo queda antes de usarlas: el calendario, con la campaña de voluntarios de la Fundación Me Diste de Comer, y el panel, con la campaña Actívate. Son fechas, piezas y números de muestra, y la página lo dice arriba. Para practicar la medición, la guía de la cuarta exposición trae un kit con tres semanas de datos ficticios de Actívate.
 
 ## Cómo instalarlas
 
@@ -57,7 +58,11 @@ Siguen el formato abierto Agent Skills, que usan agentes como Antigravity de Goo
 
 > Revisa https://github.com/mers84/skills-marketing-social, explícame qué hace cada skill e instálalas en este proyecto.
 
-Si ya habías instalado la versión anterior, borra la carpeta `perfil-intervencion`: ahora se llama `audiencia-intervencion`.
+**Para actualizar** una skill que ya instalaste, pídeselo igual:
+
+> Revisa https://github.com/mers84/skills-marketing-social y actualiza en este proyecto la skill publicacion-intervencion.
+
+Si tenías la carpeta `perfil-intervencion`, bórrala: ahora se llama `audiencia-intervencion`.
 
 O copia lo que necesites de `skills/` a una de estas carpetas:
 
@@ -74,17 +79,20 @@ npx skills add mers84/skills-marketing-social
 
 1. Crea una carpeta para tu proyecto con tu informe y tus entrevistas, **sin nombres ni datos que identifiquen a las personas**.
 2. Abre la carpeta en tu agente.
-3. Llama a cada skill:
+3. Llama a la skill con una barra y su nombre, y dile qué necesitas:
 
 ```text
 /audiencia-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
 /estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
 /contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
-/publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página con las piezas para la institución.
-/medicion-intervencion Con la audiencia, la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
+/publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña, la página con las piezas para la institución y su PDF.
+/medicion-intervencion Con los datos de esta carpeta, arma el plan de medición, el panel de la campaña y su PDF.
 ```
 
-Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF. El calendario con las piezas y el panel de medición usan la marca de la UCAB y quedan como carpetas listas para subir a Netlify Drop: se arrastra la carpeta y da un enlace para mostrarlas en el teléfono o en clase. Las dos traen su PDF.
+Los resultados quedan en `salidas/`:
+
+- **Las hojas** de cada skill salen en HTML y en PDF.
+- **El calendario con las piezas** (tercera exposición) y **el panel de medición** (cuarta) son páginas web con la marca de la UCAB. Quedan como carpetas listas para [Netlify Drop](https://app.netlify.com/drop): se arrastra la carpeta y da un enlace para mostrarlas en el teléfono o en clase. Las dos traen también su PDF.
 
 ## Límites
 
@@ -92,7 +100,7 @@ Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF. El calend
 - **Revisa las fuentes.** Los modelos pueden equivocarse, aunque las skills les pidan no inventar. Compara con tus entrevistas y con el libro.
 - **Cuida los datos.** Lo que el agente lee puede enviarse al proveedor del modelo.
 - **Comprueba lo que usas.** Antes de usar una herramienta, verifica su disponibilidad y su costo en tu país.
-- **Son una primera versión.** Todavía no se han probado en todos los agentes.
+- **Están en construcción.** Se ajustan con lo que pasa en clase y todavía no se han probado en todos los agentes.
 
 ## Fuentes y créditos
 
