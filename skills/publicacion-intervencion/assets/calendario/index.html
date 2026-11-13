@@ -204,7 +204,7 @@ body.v-cal main{max-width:none;padding:14px 18px;flex:1;min-height:0;display:fle
   var mini=function(a){var f=a.archivo&&!esVideo(a.archivo)?a.archivo:a.portada;return f?'<span class="mini"><img src="'+esc(f)+'" alt="" loading="lazy"></span>':''};
   var nPub=acc.filter(function(a){return !persona(a)}).length,nPer=acc.length-nPub;
   var h='';
-  if(C.ficticio)h+='<div class="ficticio">EJEMPLO · fechas y piezas de muestra para explicar el método, no es el calendario aprobado</div>';
+  if(C.ficticio)h+='<div class="ficticio">'+esc(C.aviso||'EJEMPLO · fechas y piezas de muestra para explicar el método, no es el calendario aprobado')+'</div>';
   h+='<section class="intro"><div class="caja"><h2>De qué se trata</h2><p>'+esc(C.intro||'')+'</p>'
     +'<div class="leyenda" style="margin-top:12px"><span><i style="background:var(--verde)"></i>Publicación en redes</span><span><i style="background:var(--azul-claro)"></i>Acción en persona</span><span>Toque cualquier acción para ver la pieza y dejar un comentario.</span></div></div>'
     +'<div class="caja cifras"><div class="cifra"><b>'+nPub+'</b><span>publicaciones</span></div><div class="cifra az"><b>'+nPer+'</b><span>acciones en persona</span></div><div class="cifra am"><b>'+esc(C.aprobar_antes||'–')+'</b><span>aprobar antes de</span></div></div></section>';
@@ -226,7 +226,7 @@ body.v-cal main{max-width:none;padding:14px 18px;flex:1;min-height:0;display:fle
     var rango=ini.getDate()+' de '+MESES[ini.getMonth()]+' al '+fin.getDate()+' de '+MESES[fin.getMonth()]+' de '+fin.getFullYear();
     h+='<section class="caja mes"><h3 style="text-transform:none">Semanas de la campaña · '+rango+'</h3><div class="grilla">'+g+'</div></section>';
     var vc='<section id="vcal"><div class="vc-top">'
-      +(C.ficticio?'<div class="ficticio">EJEMPLO · fechas y piezas de muestra</div>':'')
+      +(C.ficticio?'<div class="ficticio">'+esc(C.aviso||'EJEMPLO · fechas y piezas de muestra')+'</div>':'')
       +'<span class="tip">Toque una acción para ver la pieza y comentarla · todas las piezas, en Piezas</span></div>'
       +'<div class="caja vc-cal"><h3>Semanas de la campaña · '+rango+'</h3><div class="grilla">'+g+'</div></div>'
       +'<div class="vc-pie"><div class="leyenda"><span><i style="background:var(--verde)"></i>Publicación en redes</span><span><i style="background:var(--azul-claro)"></i>Acción en persona</span></div>'

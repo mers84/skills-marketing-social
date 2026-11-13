@@ -17,6 +17,7 @@
 
   whatsapp: número del equipo con código de país, solo si el equipo lo da ("58414..."). Si la página
   no está en Netlify, el botón de comentar abre WhatsApp con el comentario escrito.
+  ficticio: true muestra arriba un aviso amarillo; aviso cambia su texto. Quítenlo con un calendario real.
   pdf: nombre del PDF dentro de la carpeta, si existe ("calendario.pdf"), para el botón Descargar PDF.
 */
 window.CAMPANA = {
@@ -26,51 +27,52 @@ window.CAMPANA = {
   intro: "Campaña para sumar voluntarios a la cocina de la fundación, que recibe voluntarios los lunes y jueves en la mañana. Primero presenta la causa, después muestra cómo se ayuda y al final pide que la persona escriba para coordinar su primera visita con el director.",
   aprobar_antes: "20/11/2026",
   ficticio: true,
+  aviso: "EJEMPLO · fechas de muestra y el mismo video de muestra en todas las piezas",
   whatsapp: "",
   pdf: "",
 
   acciones: [
     { fecha: "2026-11-23", hora: "09:00", tipo: "publicación", canal: "Instagram",
-      titulo: "Reel: la cocina funcionando", formato: "Reel vertical, 30 s", archivo: "",
+      titulo: "Reel: la cocina funcionando", formato: "Reel vertical, 30 s", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Conocer la causa.", por_que: "Sale un lunes, mientras la cocina está funcionando.",
       cuenta: "Estadísticas de Instagram.", aprueba: "Director de la fundación", quien: "Equipo",
       explicacion: "Muestra a los voluntarios cocinando y sirviendo, para que la gente conozca lo que hace la fundación.",
       texto: "Así se ve un lunes en la cocina de Me Diste de Comer 🍲\nCada plato lo preparan voluntarios de Ciudad Guayana." },
     { fecha: "2026-11-25", hora: "12:00", tipo: "publicación", canal: "Instagram",
-      titulo: "Carrusel: cómo se ayuda", formato: "Carrusel de 5 láminas", archivo: "",
+      titulo: "Carrusel: cómo se ayuda", formato: "Carrusel de 5 láminas", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Saber cómo ser voluntario.", por_que: "Entre los dos días de cocina, cuando ya conocen la causa.",
       cuenta: "Estadísticas de Instagram: guardados y compartidos.", aprueba: "Director de la fundación", quien: "Equipo",
       explicacion: "Explica las formas de ayudar: cocinar, servir o donar, y que el primer paso es hablar con el director.",
       texto: "¿Quieres ayudar y no sabes cómo? 👇\nDesliza: te contamos las formas de sumarte a la cocina." },
     { fecha: "2026-11-27", hora: "18:00", tipo: "publicación", canal: "Grupos de WhatsApp",
-      titulo: "Mensaje en grupos de WhatsApp", formato: "Texto con el enlace del carrusel", archivo: "",
+      titulo: "Mensaje en grupos de WhatsApp", formato: "Texto con el enlace del carrusel", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Pasarlo a un conocido.", por_que: "Viernes en la tarde, antes del fin de semana y de la misa del domingo.",
       cuenta: "Mensajes que llegan preguntando cómo ayudar.", aprueba: "Director de la fundación", quien: "Equipo (no se puede programar)",
       explicacion: "Un mensaje corto para los grupos de la comunidad, con el enlace al carrusel.",
       texto: "Hola 👋 La Fundación Me Diste de Comer busca voluntarios para su cocina los lunes y jueves en la mañana. Si conoces a alguien que quiera ayudar, pásale este mensaje." },
     { fecha: "2026-11-29", hora: "11:00", tipo: "en persona", canal: "Parroquia, al salir de misa",
-      titulo: "Invitación al salir de misa", formato: "Invitación en persona con volante", archivo: "",
+      titulo: "Invitación al salir de misa", formato: "Invitación en persona con volante", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Escribir para coordinar la primera visita.", por_que: "La gente que sale de misa ya está cerca de la causa y puede decidir ahí.",
       cuenta: "Personas que dejan su contacto o escriben esa semana.", aprueba: "Director de la fundación y párroco", quien: "Equipo",
       explicacion: "Una persona del equipo invita a la salida de misa. Necesita el permiso del párroco." },
     { fecha: "2026-12-01", hora: "19:00", tipo: "publicación", canal: "Instagram (historia)",
-      titulo: "Historia: un día en la cocina", formato: "Historias, 24 horas", archivo: "",
+      titulo: "Historia: un día en la cocina", formato: "Historias, 24 horas", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Conocer la causa.", por_que: "Recuerda la causa a quienes ya la vieron.",
       cuenta: "Estadísticas de Instagram: vistas de la historia.", aprueba: "Director de la fundación", quien: "Equipo",
       explicacion: "Varias historias cortas de la mañana en la cocina, con permiso de quienes aparecen." },
     { fecha: "2026-12-02", hora: "12:00", tipo: "publicación", canal: "Instagram",
-      titulo: "Publicación: «Escríbenos para coordinar tu primera visita»", formato: "Imagen cuadrada", archivo: "",
+      titulo: "Publicación: «Escríbenos para coordinar tu primera visita»", formato: "Imagen cuadrada", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Escribir para coordinar la primera visita.", por_que: "Antes del jueves de cocina.",
       cuenta: "Mensajes directos que preguntan por la visita.", aprueba: "Director de la fundación", quien: "Equipo",
       explicacion: "Pide el paso. No invita a llegar directo: el director pidió que todo voluntario hable primero con él.",
       texto: "¿Te gustaría ayudar en la cocina? ✋\nEscríbenos por mensaje directo y coordinamos tu primera visita con el director." },
     { fecha: "2026-12-05", hora: "09:00", tipo: "en persona", canal: "Cartelera de la parroquia",
-      titulo: "Afiche en la cartelera", formato: "Afiche carta", archivo: "",
+      titulo: "Afiche en la cartelera", formato: "Afiche carta", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Escribir para coordinar la primera visita.", por_que: "Queda puesto para la misa del domingo.",
       cuenta: "Personas que dicen que lo vieron en la cartelera.", aprueba: "Director de la fundación y párroco", quien: "Equipo",
       explicacion: "Recuerda la invitación en el lugar donde la persona puede decidir." },
     { fecha: "2026-12-06", hora: "11:00", tipo: "en persona", canal: "Parroquia, al salir de misa",
-      titulo: "Invitación al salir de misa", formato: "Invitación en persona con volante", archivo: "",
+      titulo: "Invitación al salir de misa", formato: "Invitación en persona con volante", archivo: "piezas/reel-muestra.mp4", portada: "piezas/reel-muestra.jpg",
       pide: "Escribir para coordinar la primera visita.", por_que: "La invitación se repite: casi nunca basta con verla una vez.",
       cuenta: "Personas que dejan su contacto o escriben esa semana.", aprueba: "Director de la fundación y párroco", quien: "Equipo" }
   ]
