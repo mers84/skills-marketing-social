@@ -67,7 +67,7 @@ Tres trampas al leer los datos:
 
 ## Compartir el panel
 
-Igual que la página de revisión de `publicacion-intervencion` (su guía, «Publicar la página»):
+Igual que la página del calendario de `publicacion-intervencion` (su guía, «Publicar la página»):
 
 1. Crear una cuenta gratis en [Netlify](https://app.netlify.com/signup). Sin cuenta, el sitio se borra a las pocas horas.
 2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/panel` completa.

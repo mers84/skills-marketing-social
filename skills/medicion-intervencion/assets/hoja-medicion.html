@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plan de medición</title>
 <style>
-:root{--bg:#f6f5f1;--paper:#fff;--ink:#1d2023;--muted:#585d62;--accent:#f3c613;--accent-soft:#fbf0b8;--ev-bg:#dcefdf;--ev-fg:#1c5a2c;--su-bg:#fbeac4;--su-fg:#7a4d00;--fa-bg:#f8dcd8;--fa-fg:#8f2a1f}
+:root{--bg:#f3f5f4;--paper:#fff;--ink:#12100c;--muted:#5b5f63;--verde:#047732;--verde-suave:#e3f1e8;--accent:#ffc526;--accent-soft:#fff4d1;--ev-bg:#dcefdf;--ev-fg:#1c5a2c;--su-bg:#fbeac4;--su-fg:#7a4d00;--fa-bg:#f8dcd8;--fa-fg:#8f2a1f}
 *{box-sizing:border-box}
-body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.4 Verdana,Arial,sans-serif}
-.sheet{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--ink);border:3px solid var(--ink)}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.45 "Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.sheet{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--verde);border:3px solid var(--verde);border-radius:6px;overflow:hidden}
 .full{grid-column:1/-1}
-.head{color:#fff;display:flex;justify-content:space-between;gap:12px;padding:8px 12px 11px}
+.head{background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 14px;border-bottom:4px solid var(--accent)}
+.head img{height:30px;width:auto}.head .t{flex:1}
+.head span{color:var(--muted)}
 .head b{display:block;font-size:20px}.head span{font-size:13px}
 .cell{background:var(--paper);padding:13px 14px;display:flex;flex-direction:column;gap:7px;min-width:0}
 h2{margin:0;font-size:16px;line-height:1.2}
@@ -19,7 +21,7 @@ p{margin:0}
 small{color:var(--muted)}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th,td{border-bottom:1px solid #ddd;padding:6px 5px;text-align:left;vertical-align:top}
-th{background:var(--accent-soft)}
+th{background:var(--verde-suave);color:#0a5c2a}
 .tw{overflow-x:auto}
 .chip{display:inline-block;font-size:11px;font-weight:700;padding:3px 6px;white-space:nowrap}
 .ev{background:var(--ev-bg);color:var(--ev-fg)}.su{background:var(--su-bg);color:var(--su-fg)}.fa{background:var(--fa-bg);color:var(--fa-fg)}
@@ -32,7 +34,7 @@ th{background:var(--accent-soft)}
 <body>
 <!-- Sustituye los textos entre corchetes. El número de partida y la meta vienen de la hoja de la audiencia; si faltan, márcalos como Falta. -->
 <article class="sheet">
-  <header class="head full"><div><b>Plan de medición · [Proyecto]</b><span>Audiencia prioritaria: [audiencia]</span></div><span>[Fecha]</span></header>
+  <header class="head full"><img src="logo-ucab.svg" alt="UCAB" onerror="this.remove()"><div class="t"><b>Plan de medición · [Proyecto]</b><span>Audiencia prioritaria: [audiencia]</span></div><span>[Fecha]</span></header>
   <section class="cell key full"><h2>Meta</h2><p class="big">[Cuántas personas harán la conducta y para cuándo]</p><p><b>Número de partida:</b> [...] <span class="chip fa">Falta</span></p></section>
   <section class="cell full"><h2>Del «me gusta» a la conducta</h2><div class="tw"><table><thead><tr><th>Paso</th><th>Número</th><th>De dónde sale</th><th>Meta</th><th>Cada cuánto</th></tr></thead><tbody>
     <tr><td>1. La vio</td><td>[Alcance]</td><td>[Estadísticas de la red]</td><td>[...]</td><td>[Semanal]</td></tr>
@@ -43,6 +45,7 @@ th{background:var(--accent-soft)}
   <section class="cell"><h2>Métricas de vanidad</h2><p>[Números que se van a leer, pero que no dicen si la campaña funcionó]</p></section>
   <section class="cell"><h2>Antes de lanzar</h2><ul><li>[Qué se prepara]. <small>[Responsable, fecha]</small></li></ul></section>
   <section class="cell next full"><h2>El panel</h2><p>[Tres o cuatro números, al menos uno de conducta, cada uno con la decisión que permite tomar]</p></section>
+  <footer class="cell full" style="font-size:12px;color:var(--muted);flex-direction:row;justify-content:space-between;flex-wrap:wrap"><span>[Equipo]</span><span>Marketing y Gestión de Causas Sociales · UCAB Guayana · Lee y Kotler (2020)</span></footer>
 </article>
 <script>
 /* La página del PDF toma el tamaño de la hoja, para que nunca se corte. */

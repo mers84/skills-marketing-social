@@ -25,10 +25,21 @@ contenido-intervencion   → ideas, storyboard, voz en off y plan de edición
         ↓ (con el storyboard aprobado)
 animatic-intervencion    → video de prueba con fotogramas a color y voz en off
         ↓
-publicacion-intervencion → canales, calendario, textos por red y página con las piezas, enlace y programación
+publicacion-intervencion → canales, calendario web con las piezas y comentarios, PDF y programación
         ↓
-medicion-intervencion    → plan de medición, datos de cada semana y panel
+medicion-intervencion    → plan de medición, datos de cada semana y panel web con gráficos y PDF
 ```
+
+## Qué skill usa cada exposición
+
+| Exposición | Tema | Skills |
+|---|---|---|
+| Primera | La audiencia y la estrategia | `audiencia-intervencion`, `estrategia-intervencion` |
+| Segunda | Crear el contenido | `contenido-intervencion`, `animatic-intervencion` |
+| Tercera | Del contenido a la publicación | `publicacion-intervencion` |
+| Cuarta | De la publicación a la medición | `medicion-intervencion` |
+
+Para probar la cuarta sin datos reales está el kit de ejemplo de Actívate, con datos ficticios.
 
 | Skill | Qué hace |
 |---|---|
@@ -37,8 +48,8 @@ medicion-intervencion    → plan de medición, datos de cada semana y panel
 | [`contenido-intervencion`](skills/contenido-intervencion/SKILL.md) | Convierte la hoja de la audiencia y la estrategia en ideas, mensajes, eslóganes, un storyboard por planos y un plan de edición. Si el modelo puede crear imágenes, ofrece bocetos; si no, entrega el texto de los planos |
 
 | [`animatic-intervencion`](skills/animatic-intervencion/SKILL.md) | Convierte un storyboard aprobado en un video de prueba, con imágenes de Nano Banana o Codex y voz de ElevenLabs o Deepgram. La clave va en un archivo aparte. Necesita Python, Pillow y ffmpeg |
-| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red, crea una página con las piezas y un enlace para que la institución las revise, y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
-| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia; junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona; y crea un panel con gráficos en una página web |
+| [`publicacion-intervencion`](skills/publicacion-intervencion/SKILL.md) | Deja la campaña lista para salir: propone canales con datos, explica las opciones de cuenta, arma el calendario con publicaciones y acciones en persona, adapta los textos a cada red, crea una página web con el calendario, donde la institución abre cada pieza y deja su comentario, saca el PDF y programa las publicaciones, también con un conector MCP. Deja anotado cómo se va a contar cada pieza |
+| [`medicion-intervencion`](skills/medicion-intervencion/SKILL.md) | Separa las métricas de vanidad de las de conducta y arma el plan de medición con la meta y el número de partida de la hoja de la audiencia; junta los datos de cada semana, descargándolos de cada red o con el conector MCP de Metricool, más el conteo en persona; y crea un panel con gráficos en una página web, al estilo de un tablero de Looker Studio, y su PDF |
 
 ## Cómo instalarlas
 
@@ -69,11 +80,11 @@ npx skills add mers84/skills-marketing-social
 /audiencia-intervencion Lee el informe y las entrevistas. Audiencia prioritaria: ...
 /estrategia-intervencion Usa la hoja de la audiencia de esta carpeta.
 /contenido-intervencion Usa la audiencia y la estrategia. Dame ideas de contenido y el storyboard del video que elijamos.
-/publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página de revisión para la institución.
+/publicacion-intervencion Con la estrategia y las piezas, arma el calendario de la campaña y la página con las piezas para la institución.
 /medicion-intervencion Con la audiencia, la estrategia y el calendario, arma el plan de medición y el panel de la campaña.
 ```
 
-Los resultados quedan en `salidas/`. Las hojas salen en HTML; las de audiencia, estrategia y contenido, también en PDF. La página de revisión de las piezas y el panel de medición quedan como carpetas listas para subir a Netlify Drop y compartir con un enlace.
+Los resultados quedan en `salidas/`. Las hojas salen en HTML y en PDF. El calendario con las piezas y el panel de medición usan la marca de la UCAB y quedan como carpetas listas para subir a Netlify Drop: se arrastra la carpeta y da un enlace para mostrarlas en el teléfono o en clase. Las dos traen su PDF.
 
 ## Límites
 

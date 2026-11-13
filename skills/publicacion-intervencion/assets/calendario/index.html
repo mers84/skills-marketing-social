@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Calendario de la campaña</title>
+<!--
+  PLANTILLA DEL CALENDARIO Y LAS PIEZAS. No se edita este archivo: los datos van en datos.js
+  y las imágenes y videos en la carpeta piezas/.
+  La carpeta completa (index.html, datos.js, logo-ucab.svg, piezas/) es la que se sube a Netlify Drop.
+-->
+<style>
+:root{
+  --verde:#047732;--verde-2:#0a5c2a;--verde-suave:#e3f1e8;
+  --azul:#1b7fb0;--azul-claro:#40b4e5;--azul-suave:#e2f3fb;
+  --amarillo:#ffc526;--amarillo-suave:#fff4d1;
+  --tinta:#12100c;--gris:#5b5f63;--gris-claro:#9aa0a6;--linea:#e2e4e6;
+  --fondo:#f3f5f4;--papel:#fff;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--fondo);color:var(--tinta);font:15px/1.45 "Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.barra{background:var(--papel);border-bottom:4px solid var(--verde);display:flex;align-items:center;gap:18px;padding:12px 24px;flex-wrap:wrap}
+.barra img{height:34px;width:auto}
+.barra .tit{flex:1;min-width:220px}
+.barra h1{margin:0;font-size:20px;line-height:1.2}
+.barra p{margin:2px 0 0;color:var(--gris);font-size:13px}
+.barra .acc{display:flex;gap:8px}
+.btn{border:1px solid var(--verde);background:var(--verde);color:#fff;font:600 13px/1 inherit;font-family:inherit;padding:9px 14px;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.sec{background:#fff;color:var(--verde)}
+main{max-width:1240px;margin:auto;padding:20px 24px 48px;display:grid;gap:18px}
+.ficticio{background:var(--amarillo);font-weight:700;text-align:center;padding:9px 14px;border-radius:6px}
+.caja{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:16px 18px;min-width:0}
+h2{margin:0 0 6px;font-size:17px;line-height:1.25}
+.intro{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
+.intro p{margin:0}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cifra{background:var(--verde-suave);border-radius:8px;padding:10px 12px}
+.cifra b{display:block;font-size:26px;line-height:1.1;color:var(--verde-2)}
+.cifra span{font-size:12.5px;color:var(--gris)}
+.cifra.az{background:var(--azul-suave)}.cifra.az b{color:#0f5d82}
+.cifra.am{background:var(--amarillo-suave)}.cifra.am b{color:#7a5a00;font-size:18px;padding:4px 0}
+.leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--gris);margin-top:4px}
+.leyenda i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.mes h3{margin:0 0 10px;font-size:16px;text-transform:capitalize}
+.grilla{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--linea);border-left:1px solid var(--linea)}
+.dsem{font-size:11.5px;font-weight:700;color:var(--gris);text-transform:uppercase;padding:6px 8px;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);background:#fafbfa}
+.dia{min-height:104px;padding:5px 5px 7px;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);display:flex;flex-direction:column;gap:4px;min-width:0}
+.dia.fuera{background:#fafbfa}
+.dia .n{font-size:12px;color:var(--gris);font-weight:600;padding:0 3px}
+.dia.fuera .n{color:#c9cdd0}
+.ev{all:unset;cursor:pointer;display:block;border-radius:5px;padding:4px 6px;font-size:12px;line-height:1.25;background:var(--verde);color:#fff;overflow:hidden}
+.ev.persona{background:var(--azul-claro);color:var(--tinta)}
+.ev:hover,.ev:focus-visible{outline:2px solid var(--amarillo);outline-offset:1px}
+.ev small{display:block;opacity:.85;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600}
+.lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.pieza{background:var(--papel);border:1px solid var(--linea);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;break-inside:avoid}
+.pieza .media{aspect-ratio:4/5;background:#e9ecea;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.pieza .media img,.pieza .media video{width:100%;height:100%;object-fit:cover;display:block}
+.sinarchivo{display:grid;place-items:center;text-align:center;gap:6px;color:var(--gris);font-size:13px;padding:18px}
+.sinarchivo b{font-size:40px;line-height:1;color:var(--verde)}
+.tipo{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:4px 8px;border-radius:4px;background:var(--verde);color:#fff}
+.tipo.persona{background:var(--azul-claro);color:var(--tinta)}
+.pieza .info{padding:14px 16px;display:grid;gap:6px;flex:1;align-content:start}
+.pieza .num{font-size:12px;font-weight:700;color:var(--gris)}
+.pieza h3{margin:0;font-size:16px;line-height:1.25}
+.meta{font-size:13px;color:var(--gris)}
+.pide{font-size:13.5px}
+.pieza .ver{margin:4px 16px 16px;justify-self:start}
+.texto{white-space:pre-wrap;font-size:14px;background:#f7f8f7;border-left:4px solid var(--verde);padding:10px 12px;border-radius:4px;margin:0}
+.solo-imp{display:none}
+dialog{border:0;border-radius:12px;padding:0;width:min(1000px,96vw);max-height:92vh;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(18,16,12,.55)}
+.modal{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);max-height:92vh}
+.modal .media{background:#111;display:flex;align-items:center;justify-content:center;min-height:320px}
+.modal .media img,.modal .media video{max-width:100%;max-height:92vh;display:block}
+.modal .media .sinarchivo{color:#ccc}
+.modal .lado{padding:20px 22px;overflow:auto;display:grid;gap:12px;align-content:start}
+.cerrar{all:unset;position:absolute;top:10px;right:12px;cursor:pointer;font-size:26px;line-height:1;color:var(--gris);padding:4px 8px}
+.datos{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13.5px;margin:0}
+.datos dt{color:var(--gris)}.datos dd{margin:0}
+form.comentar{border-top:1px solid var(--linea);padding-top:12px;display:grid;gap:10px}
+form.comentar h3{margin:0;font-size:15px}
+.opciones{display:flex;gap:8px;flex-wrap:wrap}
+.opciones label{border:1px solid var(--linea);border-radius:6px;padding:7px 11px;cursor:pointer;font-size:13.5px}
+.opciones input{margin:0 6px 0 0}
+.opciones label:has(input:checked){border-color:var(--verde);background:var(--verde-suave)}
+textarea,input[type=text]{width:100%;font:inherit;border:1px solid #c9cdd0;border-radius:6px;padding:8px 10px}
+textarea{min-height:90px;resize:vertical}
+.aviso{font-size:13px;padding:8px 10px;border-radius:6px;background:var(--verde-suave);color:var(--verde-2)}
+.aviso.error{background:#fbe3e1;color:#8f2a1f}
+footer{color:var(--gris);font-size:12px;border-top:1px solid var(--linea);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media screen and (max-width:820px){
+  main{padding:16px}.barra{padding:12px 16px}
+  .intro{grid-template-columns:minmax(0,1fr)}
+  dialog{overflow:auto}
+  .modal{grid-template-columns:minmax(0,1fr);max-height:none}
+  .modal .media{min-height:220px}
+  .modal .media img,.modal .media video{max-height:55vh}
+  .modal .lado{overflow:visible}
+  .dsem{padding:5px 3px;font-size:10px;text-align:center}
+  .dia{min-height:62px;padding:3px 2px}
+  .ev{padding:3px;font-size:0;min-height:10px}
+  .ev .t,.ev small{display:none}
+  .ev::after{content:attr(data-corto);font-size:10px;font-weight:700;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:12.5px}
+  .barra .acc,.pieza .ver,dialog{display:none!important}
+  main{max-width:none;padding:10px 0 0;gap:12px}
+  .barra{padding:6px 0 10px}
+  .mes{break-inside:avoid}
+  .dia{min-height:78px}
+  .lista{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pieza .media{aspect-ratio:16/10}
+  .solo-imp{display:block}
+  .salto{break-before:page}
+}
+</style>
+</head>
+<body>
+<header class="barra">
+  <img src="logo-ucab.svg" alt="UCAB">
+  <div class="tit"><h1 id="titulo">Calendario de la campaña</h1><p id="bajada"></p></div>
+  <div class="acc"><a class="btn sec" id="btn-pdf" hidden download>Descargar PDF</a><button class="btn" id="btn-imp" type="button">Guardar en PDF</button></div>
+</header>
+<main id="app"></main>
+<dialog id="dlg"><div id="dlg-in"></div></dialog>
+
+<!-- Formulario oculto para que Netlify lo detecte. Los comentarios se mandan con estos mismos campos. -->
+<form name="comentarios" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="pieza"><input name="decision"><input name="nombre"><textarea name="comentario"></textarea>
+</form>
+
+<script src="datos.js"></script>
+<script>
+(function(){
+  var C = window.CAMPANA, app = document.getElementById('app');
+  if(!C){app.innerHTML='<div class="caja">Falta el archivo <b>datos.js</b> junto a esta página.</div>';return;}
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var DIAS=['lun','mar','mié','jue','vie','sáb','dom'];
+  var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var persona=function(a){return /persona|presencial|físic/i.test(a.tipo||'')};
+  var fecha=function(s){var p=String(s).split('-');return new Date(+p[0],+p[1]-1,+p[2])};
+  var larga=function(a){var d=fecha(a.fecha);return ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'][d.getDay()]+' '+d.getDate()+' de '+MESES[d.getMonth()]+(a.hora?', '+a.hora:'')};
+  var acc=(C.acciones||[]).slice().sort(function(a,b){return (a.fecha+(a.hora||'')).localeCompare(b.fecha+(b.hora||''))});
+  acc.forEach(function(a,i){if(a.id==null)a.id=i+1});
+  var esVideo=function(f){return /\.(mp4|webm|mov|m4v)$/i.test(f||'')};
+  var media=function(a,enModal){
+    if(a.archivo&&esVideo(a.archivo))return '<video src="'+esc(a.archivo)+(a.portada?'" poster="'+esc(a.portada):'#t=0.5')+'" '+(enModal?'controls autoplay':'muted')+' playsinline preload="metadata"></video>';
+    if(a.archivo)return '<img src="'+esc(a.archivo)+'" alt="'+esc(a.titulo)+'">';
+    if(a.portada)return '<img src="'+esc(a.portada)+'" alt="'+esc(a.titulo)+'">';
+    return '<div class="sinarchivo"><b>'+(persona(a)?'⌂':'▶')+'</b>'+(persona(a)?'Acción en persona':'Pieza sin archivo todavía')+'<br>'+esc(a.canal||'')+'</div>';
+  };
+
+  document.title='Calendario · '+(C.proyecto||'Campaña');
+  document.getElementById('titulo').textContent='Calendario de la campaña · '+(C.proyecto||'');
+  document.getElementById('bajada').textContent=[C.institucion,C.equipo?'Equipo: '+C.equipo:''].filter(Boolean).join(' · ');
+  if(C.pdf){var bp=document.getElementById('btn-pdf');bp.href=C.pdf;bp.hidden=false}
+  document.getElementById('btn-imp').onclick=function(){window.print()};
+
+  var nPub=acc.filter(function(a){return !persona(a)}).length,nPer=acc.length-nPub;
+  var h='';
+  if(C.ficticio)h+='<div class="ficticio">EJEMPLO · fechas y piezas de muestra para explicar el método, no es el calendario aprobado</div>';
+  h+='<section class="intro"><div class="caja"><h2>De qué se trata</h2><p>'+esc(C.intro||'')+'</p>'
+    +'<div class="leyenda" style="margin-top:12px"><span><i style="background:var(--verde)"></i>Publicación en redes</span><span><i style="background:var(--azul-claro)"></i>Acción en persona</span><span>Toque cualquier acción para ver la pieza y dejar un comentario.</span></div></div>'
+    +'<div class="caja cifras"><div class="cifra"><b>'+nPub+'</b><span>publicaciones</span></div><div class="cifra az"><b>'+nPer+'</b><span>acciones en persona</span></div><div class="cifra am"><b>'+esc(C.aprobar_antes||'–')+'</b><span>aprobar antes de</span></div></div></section>';
+
+  /* Una sola grilla con las semanas de la campaña, de lunes a domingo. Los días sin acciones quedan en gris. */
+  if(acc.length){
+    var ini=fecha(acc[0].fecha),fin=fecha(acc[acc.length-1].fecha);
+    var d=new Date(ini);d.setDate(d.getDate()-(d.getDay()+6)%7);
+    var g='';DIAS.forEach(function(x){g+='<div class="dsem">'+x+'</div>'});
+    var primero=true;
+    while(d<=fin||(d.getDay()+6)%7!==0){
+      var key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+      var evs=acc.filter(function(a){return a.fecha===key});
+      var etiqueta=(primero||d.getDate()===1)?d.getDate()+' '+MESES[d.getMonth()].slice(0,3):d.getDate();primero=false;
+      g+='<div class="dia'+(evs.length?'':' fuera')+'"><span class="n">'+etiqueta+'</span>'
+        +evs.map(function(a){return '<button class="ev'+(persona(a)?' persona':'')+'" data-id="'+a.id+'" data-corto="'+esc(a.canal||a.titulo)+'" type="button"><small>'+esc((a.hora?a.hora+' · ':'')+(a.canal||''))+'</small><span class="t">'+esc(a.titulo)+'</span></button>'}).join('')+'</div>';
+      d.setDate(d.getDate()+1);
+    }
+    var rango=ini.getDate()+' de '+MESES[ini.getMonth()]+' al '+fin.getDate()+' de '+MESES[fin.getMonth()]+' de '+fin.getFullYear();
+    h+='<section class="caja mes"><h3 style="text-transform:none">Semanas de la campaña · '+rango+'</h3><div class="grilla">'+g+'</div></section>';
+  }
+
+  h+='<section class="salto"><h2 style="margin:6px 0 12px">Todas las piezas y acciones, en orden</h2><div class="lista">'
+    +acc.map(function(a){return '<article class="pieza"><div class="media">'+media(a,false)+'<span class="tipo'+(persona(a)?' persona':'')+'">'+(persona(a)?'En persona':'Publicación')+'</span></div>'
+      +'<div class="info"><span class="num">'+(persona(a)?'Acción ':'Pieza ')+a.id+'</span><h3>'+esc(a.titulo)+'</h3>'
+      +'<p class="meta">'+esc(larga(a))+' · '+esc(a.canal||'')+(a.formato?' · '+esc(a.formato):'')+'</p>'
+      +(a.pide?'<p class="pide"><b>Le pide a la persona:</b> '+esc(a.pide)+'</p>':'')
+      +(a.texto?'<p class="texto solo-imp">'+esc(a.texto)+'</p>':'')
+      +'</div><button class="btn sec ver" data-id="'+a.id+'" type="button">Ver y comentar</button></article>'}).join('')+'</div></section>';
+  h+='<footer><span>'+esc(C.equipo?'Preparado por '+C.equipo:'')+'. Ninguna pieza se publica sin la aprobación de la institución.</span><span>Marketing y Gestión de Causas Sociales · UCAB Guayana · Lee y Kotler (2020), cap. 14</span></footer>';
+  app.innerHTML=h;
+
+  /* Ventana con la pieza, sus datos y la cajita de comentarios. */
+  var dlg=document.getElementById('dlg'),din=document.getElementById('dlg-in');
+  function abrir(id){
+    var a=acc.filter(function(x){return String(x.id)===String(id)})[0];if(!a)return;
+    var fila=function(k,v){return v?'<dt>'+k+'</dt><dd>'+esc(v)+'</dd>':''};
+    din.innerHTML='<div class="modal"><div class="media">'+media(a,true)+'</div><div class="lado" style="position:relative">'
+      +'<button class="cerrar" type="button" aria-label="Cerrar">×</button>'
+      +'<span class="num" style="font-size:12px;font-weight:700;color:var(--gris)">'+(persona(a)?'Acción ':'Pieza ')+a.id+'</span>'
+      +'<h2 style="margin:0;padding-right:30px">'+esc(a.titulo)+'</h2>'
+      +'<dl class="datos">'+fila('Cuándo',larga(a))+fila('Dónde',a.canal)+fila('Formato',a.formato)+fila('Le pide',a.pide)+fila('Por qué ese día',a.por_que)+fila('Cómo se cuenta',a.cuenta)+fila('La aprueba',a.aprueba)+fila('La publica o la hace',a.quien)+'</dl>'
+      +(a.explicacion?'<p style="margin:0">'+esc(a.explicacion)+'</p>':'')
+      +(a.texto?'<p class="texto">'+esc(a.texto)+'</p>':'')
+      +(a.aprobar===false?'':'<form class="comentar"><h3>¿La aprobamos?</h3>'
+        +'<div class="opciones"><label><input type="radio" name="decision" value="Aprobada" required>Aprobada</label><label><input type="radio" name="decision" value="Pedir cambios">Pedir cambios</label></div>'
+        +'<textarea name="comentario" placeholder="Comentario: qué cambiarían o qué les gustó"></textarea>'
+        +'<input type="text" name="nombre" placeholder="Su nombre">'
+        +'<button class="btn" type="submit" style="justify-self:start">Enviar comentario</button><div class="estado"></div></form>')
+      +'</div></div>';
+    din.querySelector('.cerrar').onclick=function(){dlg.close()};
+    var f=din.querySelector('form.comentar');if(f)f.onsubmit=function(e){e.preventDefault();enviar(a,f)};
+    dlg.showModal();
+  }
+  dlg.addEventListener('close',function(){var v=din.querySelector('video');if(v)v.pause();din.innerHTML=''});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  app.addEventListener('click',function(e){var b=e.target.closest('[data-id]');if(b)abrir(b.getAttribute('data-id'))});
+
+  /* En Netlify el comentario llega a la sección Forms del sitio. Fuera de Netlify, se abre WhatsApp o se copia. */
+  function enviar(a,f){
+    var datos={'form-name':'comentarios',pieza:(persona(a)?'Acción ':'Pieza ')+a.id+': '+a.titulo,decision:f.decision.value,comentario:f.comentario.value,nombre:f.nombre.value};
+    var est=f.querySelector('.estado'),texto=datos.pieza+'\n'+datos.decision+(datos.comentario?'\n'+datos.comentario:'')+(datos.nombre?'\n'+datos.nombre:'');
+    var aviso=function(m,err){est.innerHTML='<div class="aviso'+(err?' error':'')+'">'+m+'</div>'};
+    var plan_b=function(){
+      if(C.whatsapp){window.open('https://wa.me/'+String(C.whatsapp).replace(/\D/g,'')+'?text='+encodeURIComponent(texto),'_blank');aviso('Se abrió WhatsApp con el comentario. Solo falta tocar Enviar.')}
+      else if(navigator.clipboard){navigator.clipboard.writeText(texto).then(function(){aviso('Comentario copiado. Péguelo en un mensaje al equipo.')},function(){aviso('Escríbale este comentario al equipo: '+esc(texto),true)})}
+      else aviso('Escríbale este comentario al equipo: '+esc(texto),true);
+    };
+    if(location.protocol.indexOf('http')!==0){plan_b();return}
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(datos).toString()})
+      .then(function(r){if(!r.ok)throw 0;aviso('¡Gracias! El comentario le llegó al equipo.');f.querySelector('button[type=submit]').disabled=true})
+      .catch(plan_b);
+  }
+})();
+</script>
+</body>
+</html>

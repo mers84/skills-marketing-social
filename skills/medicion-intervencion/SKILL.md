@@ -1,6 +1,6 @@
 ---
 name: medicion-intervencion
-description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Prepara y lleva la medición de una campaña de marketing social. A partir de la audiencia, la estrategia y la publicación, separa las métricas de vanidad de las de conducta, arma el plan de medición (qué número mide cada paso hacia la conducta, la meta y el número de partida), junta los datos de cada semana desde las redes y el conteo en persona, y crea un panel con gráficos en una página web. Usar cuando se pida un plan de medición, decidir qué medir, bajar o leer las estadísticas de las redes, llevar el registro semanal o armar un panel o tablero de la campaña.
+description: Basada en Lee y Kotler (2020), Social Marketing, 6.ª ed. Prepara y lleva la medición de una campaña de marketing social. A partir de la audiencia, la estrategia y la publicación, separa las métricas de vanidad de las de conducta, arma el plan de medición (qué número mide cada paso hacia la conducta, la meta y el número de partida), junta los datos de cada semana desde las redes y el conteo en persona, y crea un panel con gráficos, con la marca de la UCAB, en una página web y en PDF. Usar cuando se pida un plan de medición, decidir qué medir, bajar o leer las estadísticas de las redes, llevar el registro semanal o armar un panel o tablero de la campaña.
 ---
 
 # Medición de intervención
@@ -62,21 +62,52 @@ Lee también `datos/conteo.csv`, `datos/escaneos.csv` y `datos/compromisos.csv`.
 
 ### 4. Crea el panel
 
-Crea la carpeta `salidas/panel/`, lista para Netlify Drop, con `index.html`: una página que se abre sin servidor, con un gráfico por número elegido (tres o cuatro, al menos uno de conducta), semana a semana, con la meta marcada y, al lado, la decisión que sugiere. Pon los datos dentro de la página, y que nada de lo que necesita quede fuera de la carpeta. Si los datos son de ejemplo, escribe arriba, visible, que son ficticios.
+Es una página como un tablero de Looker Studio, con la marca de la UCAB: arriba la conducta y la meta, luego los números grandes y debajo los gráficos, cada uno con la decisión que permite tomar.
 
-No la subas tú. La sube el equipo, para que la institución vea el panel en el teléfono con un enlace: se arrastra la carpeta `salidas/panel` a Netlify Drop (guía, «Compartir el panel»). Cada semana, con los datos nuevos, actualizas la página y el equipo vuelve a arrastrar la carpeta al mismo sitio, para que el enlace no cambie.
+**No escribas la página: copia la plantilla y llena sus datos.**
+
+1. Copia la carpeta [assets/panel/](assets/panel/) completa a `salidas/panel/`: `index.html`, `datos.js` y `logo-ucab.svg`. No cambies `index.html`.
+2. Reescribe `salidas/panel/datos.js` con los números del proyecto. El archivo trae el ejemplo de Actívate y explica cada campo; reemplázalo todo.
+3. Elige el tipo de cada recuadro según el dato:
+
+   | El dato | Tipo | Ejemplo |
+   |---|---|---|
+   | Un número con su meta o su cambio frente a la semana anterior | `kpi` | Estudiantes que hicieron la pausa esta semana: 62, con una meta de 60 |
+   | Un número semana a semana | `linea`, con `meta` si la hay | La conducta en las últimas cuatro semanas |
+   | Comparar lugares, piezas o grupos | `barras` | Cuántos hicieron la conducta en cada salón |
+   | Partes de un total | `dona` | Cuántos se comprometieron y cuántos no |
+   | Los pasos de ver la pieza a hacer la conducta | `embudo` | La vio, le interesó, dio un primer paso, la hizo |
+   | El detalle fila por fila | `tabla` | El conteo de la última semana |
+
+   Pon de tres a cinco `kpi` y de tres a seis gráficos, al menos uno de conducta. Marca cada uno con su `capa` (conducta, primer paso, interés o vanidad), su `fuente` y su `decision`. No sumes el alcance de varias publicaciones (guía, «El panel»).
+4. Si los datos son de ejemplo, deja `ficticio: true`: la página lo dice arriba, en amarillo.
+5. Saca `salidas/panel/panel.pdf` con el comando de «Sacar los PDF», en el paso 5, y pon `pdf: "panel.pdf"` en `datos.js`, para que la página muestre el botón «Descargar PDF».
 
 Después, compara cada número del panel con el archivo de donde salió y pide al equipo que lo revise también.
+
+No la subas tú. La sube el equipo, para que la institución vea el panel en el teléfono con un enlace: se arrastra la carpeta `salidas/panel` a Netlify Drop (guía, «Compartir el panel»). Cada semana, con los datos nuevos, actualizas `datos.js` y el PDF, y el equipo vuelve a arrastrar la carpeta al mismo sitio, para que el enlace no cambie.
 
 ### 5. Guarda las salidas
 
 En `salidas/`:
 
 - `medicion.md`: los datos, con el formato de abajo.
-- `medicion.html`: la hoja del plan, a partir de [assets/hoja-medicion.html](assets/hoja-medicion.html). Crece según la información.
-- `panel/`: la carpeta del panel, lista para Netlify Drop.
+- `medicion.html` y `medicion.pdf`: la hoja del plan, a partir de [assets/hoja-medicion.html](assets/hoja-medicion.html), con la marca de la UCAB. Copia [assets/logo-ucab.svg](assets/logo-ucab.svg) a `salidas/` para que se vea el logo. La hoja crece según la información.
+- `panel/`: la carpeta del panel, lista para Netlify Drop, con `index.html`, `datos.js`, `logo-ucab.svg` y `panel.pdf`.
 
 Y en `datos/`, los archivos de cada semana y `conteo.csv`.
+
+### Sacar los PDF
+
+Para sacar el PDF de una página, imprímela con el navegador sin abrir ventanas. En Windows, desde la carpeta del proyecto:
+
+```powershell
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu --window-size=1280,900 --no-pdf-header-footer --virtual-time-budget=4000 --print-to-pdf="$PWD\salidas\panel\panel.pdf" "file:///$($PWD -replace '\\','/')/salidas/panel/index.html"
+```
+
+En Mac, lo mismo con `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`. Mantén `--window-size=1280,900`: sin él, el PDF sale en una sola columna. Si el comando falla, pide al equipo que abra la página y toque «Guardar en PDF». El PDF tarda unos segundos en aparecer después de que el comando termina. Ábrelo y revisa que no haya nada cortado.
+
+Para la hoja, cambia las rutas por `salidas/medicion.html` y `salidas\medicion.pdf`.
 
 ### 6. Cierra
 

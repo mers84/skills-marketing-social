@@ -55,19 +55,29 @@ Comprueba en la ayuda de cada red las medidas vigentes. Como regla general:
 ### Netlify Drop (el más sencillo)
 
 1. Crear una cuenta gratis en [Netlify](https://app.netlify.com/signup), con Google o con correo. Sin cuenta, el sitio se borra a las pocas horas.
-2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/revision` completa, con `index.html` y la subcarpeta `piezas/` adentro. Si se sube solo el HTML, la página abre pero sin imágenes ni videos. La página de Netlify Drop dice que también acepta un zip; si el zip falla, se descomprime y se arrastra la carpeta.
-3. En segundos da un enlace del tipo `nombre-al-azar.netlify.app`. En la configuración del sitio se le puede cambiar el nombre, por ejemplo `revision-fundacion.netlify.app`.
+2. Abrir [Netlify Drop](https://app.netlify.com/drop) y arrastrar la carpeta `salidas/calendario` completa, con `index.html`, `datos.js`, `logo-ucab.svg` y la subcarpeta `piezas/` adentro. Si se sube solo el HTML, la página abre pero sin imágenes ni videos. La página de Netlify Drop dice que también acepta un zip; si el zip falla, se descomprime y se arrastra la carpeta.
+3. En segundos da un enlace del tipo `nombre-al-azar.netlify.app`. En la configuración del sitio se le puede cambiar el nombre, por ejemplo `calendario-fundacion.netlify.app`.
 4. Para actualizar, se arrastra de nuevo la carpeta en la sección de despliegues del mismo sitio, y el enlace queda igual.
 
 No hace falta instalar nada ni usar la terminal.
 
+### Recibir los comentarios
+
+La página trae un formulario que Netlify puede recibir ([documentación de Netlify Forms](https://docs.netlify.com/manage/forms/setup/)):
+
+1. En el sitio de Netlify, abrir **Forms** y tocar **Enable form detection**.
+2. Volver a arrastrar la carpeta, porque Netlify busca el formulario en el siguiente despliegue.
+3. Para recibirlos por correo: **Forms > Submission notifications > Add notification**, con el correo del equipo.
+
+Cada comentario llega con el número de la pieza, si la aprobaron o pidieron cambios, el comentario y el nombre. Si el formulario no está activado, la página no falla: abre WhatsApp con el comentario, si el equipo puso su número en `datos.js`, o lo copia para pegarlo en un mensaje. El plan gratis de Netlify tiene un límite de envíos al mes.
+
 ### Gemini Canvas (si no usan un agente)
 
-En [Gemini](https://gemini.google.com), con Canvas activado, se le pide la página de revisión con los textos de cada pieza y se comparte desde «Compartir y exportar». El enlace se abre en gemini.google.com ([ayuda de Gemini](https://support.google.com/gemini/answer/16047321)). Sirve para textos; con videos es más limitado.
+En [Gemini](https://gemini.google.com), con Canvas activado, se le pide una página con los textos de cada pieza y se comparte desde «Compartir y exportar». El enlace se abre en gemini.google.com ([ayuda de Gemini](https://support.google.com/gemini/answer/16047321)). Sirve para textos; con videos es más limitado.
 
 ### Firebase Hosting (si ya usan la terminal)
 
-Firebase es de Google y su plan gratis, Spark, no pide forma de pago según la [página de precios](https://firebase.google.com/pricing). Necesita Node.js: `npm install -g firebase-tools`, `firebase login`, `firebase init hosting` con `salidas/revision` como carpeta pública, y `firebase deploy --only hosting`. Da un enlace `nombre.web.app`. No uses «Publish my app» de Antigravity para esta página: publica en Firebase App Hosting, pensado para aplicaciones, que puede pedir un plan de pago.
+Firebase es de Google y su plan gratis, Spark, no pide forma de pago según la [página de precios](https://firebase.google.com/pricing). Necesita Node.js: `npm install -g firebase-tools`, `firebase login`, `firebase init hosting` con `salidas/calendario` como carpeta pública, y `firebase deploy --only hosting`. Da un enlace `nombre.web.app`. No uses «Publish my app» de Antigravity para esta página: publica en Firebase App Hosting, pensado para aplicaciones, que puede pedir un plan de pago.
 
 ## Programar
 
