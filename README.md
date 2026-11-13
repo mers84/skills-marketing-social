@@ -60,12 +60,50 @@ Si una pieza todavía no existe, el calendario igual sale y muestra un recuadro 
 |---|---|---|---|
 | Primera | La audiencia y la estrategia | `audiencia-intervencion` y `estrategia-intervencion` | La hoja de la audiencia prioritaria y la hoja de estrategia |
 | Segunda | Crear el contenido | `contenido-intervencion` y `animatic-intervencion` | Las ideas, el storyboard y el video de prueba |
-| Tercera | Del contenido a la publicación | `publicacion-intervencion` | La página del calendario con las piezas, con su enlace y su PDF |
-| Cuarta | De la publicación a la medición | `medicion-intervencion` | El plan de medición y el panel con gráficos, con su enlace y su PDF |
+| Tercera | Del contenido a la publicación | `publicacion-intervencion` | El calendario a pantalla completa y las piezas con su cajita de comentarios, con su enlace y su PDF |
+| Cuarta | De la publicación a la medición | `medicion-intervencion` | El plan de medición y el panel en su vista de tablero, con su enlace y su PDF |
 
 Cada equipo usa las skills de su exposición. No hace falta correr las anteriores: si faltan sus salidas, la skill pide lo mínimo que necesita. Después, en las evaluaciones, cada equipo recorre la cadena completa con su propio proyecto.
 
-Las plantillas traen un ejemplo para ver cómo queda antes de usarlas: el calendario, con la campaña de voluntarios de la Fundación Me Diste de Comer, y el panel, con la campaña Actívate. Son fechas, piezas y números de muestra, y la página lo dice arriba. Para practicar la medición, la guía de la cuarta exposición trae un kit con tres semanas de datos ficticios de Actívate.
+Para practicar la medición, la guía de la cuarta exposición trae un kit con tres semanas de datos ficticios de Actívate.
+
+## Cómo se ven las páginas
+
+`publicacion-intervencion` y `medicion-intervencion` dejan, además de su hoja, una página web con la marca de la UCAB. Cada una tiene dos vistas con los mismos datos, y las dos traen su PDF.
+
+### El calendario de la campaña
+
+- **Calendario**: las semanas de la campaña ocupan la pantalla, para proyectarlas en una exposición o en una reunión. Es la vista que abre en la computadora.
+- **Piezas**: todas las piezas en orden, para que la institución las revise. Es la vista que abre en el teléfono.
+
+Al tocar una acción se abre la pieza, con su video o su imagen, su texto y una cajita para aprobarla o pedir un cambio.
+
+![Vista de calendario](docs/img/calendario.jpg)
+
+![Una pieza abierta con la cajita de comentarios](docs/img/calendario-pieza.jpg)
+
+### El panel de medición
+
+- **Tablero**: cabe en una pantalla, con los números grandes y los gráficos de cada indicador. Al tocar un recuadro se ve qué decidir.
+- **Informe**: la página completa, con cada gráfico, la decisión que permite tomar y de dónde sale el número.
+
+![Vista de tablero del panel](docs/img/panel-tablero.jpg)
+
+![Gráficos de la vista de informe](docs/img/panel-informe.jpg)
+
+### Ver los ejemplos
+
+Las plantillas traen un ejemplo armado: el calendario, con la campaña de voluntarios de la Fundación Me Diste de Comer y el mismo video de muestra en todas las piezas, y el panel, con datos ficticios de la campaña Actívate. Para verlos, abre con el navegador `skills/publicacion-intervencion/assets/calendario/index.html` y `skills/medicion-intervencion/assets/panel/index.html`. Las dos páginas dicen arriba que son un ejemplo.
+
+### Compartirlas con un enlace
+
+La skill deja la carpeta lista (`salidas/calendario` o `salidas/panel`) y el equipo la sube:
+
+1. Crea una cuenta gratis en [Netlify](https://app.netlify.com/signup). Sin cuenta, la página se borra a las pocas horas.
+2. Arrastra la carpeta completa a [Netlify Drop](https://app.netlify.com/drop).
+3. Netlify da un enlace del tipo `nombre.netlify.app`. Para actualizar, se arrastra de nuevo la carpeta al mismo sitio y el enlace no cambia.
+
+En el calendario, los comentarios de la institución pueden llegar a la sección Forms de Netlify; los pasos están en la guía de `publicacion-intervencion`.
 
 ## Cómo instalarlas
 
