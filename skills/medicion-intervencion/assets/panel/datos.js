@@ -16,7 +16,8 @@
     tabla   El detalle, cuando hace falta ver cada fila.
             Campos: columnas, filas.
   Campos comunes: titulo, subtitulo, capa ("conducta", "primer paso", "interés" o "vanidad"),
-  decision (qué decidir con ese número), fuente (de qué archivo sale), nota, ancho ("completo" ocupa toda la fila).
+  decision (qué decidir con ese número), fuente (de qué archivo sale), nota, ancho ("completo" ocupa toda la fila),
+  tablero (true en los dos o tres gráficos que van en la vista de tablero; los kpi van siempre, hasta cinco).
 */
 window.PANEL = {
   proyecto: "Actívate",
@@ -46,7 +47,7 @@ window.PANEL = {
       valor: 1150, unidad: "cuentas vieron el reel con estudiantes",
       fuente: "datos/2026-12-13_instagram.csv" },
 
-    { tipo: "linea", capa: "conducta", titulo: "Estudiantes que hicieron la pausa, por semana",
+    { tipo: "linea", capa: "conducta", titulo: "Estudiantes que hicieron la pausa, por semana", tablero: true,
       subtitulo: "Suma de los 4 salones, un bloque por salón a la semana",
       ejeX: ["25-26/11", "02-03/12", "09-10/12"],
       series: [{ nombre: "Hicieron la pausa", valores: [54, 57, 62] }],
@@ -54,7 +55,7 @@ window.PANEL = {
       decision: "La tendencia sube. Revisar en enero si se sostiene cuando el profesor deja de dirigirla.",
       fuente: "datos/conteo.csv" },
 
-    { tipo: "barras", capa: "conducta", titulo: "Cuántos hicieron la pausa según quién la propuso",
+    { tipo: "barras", capa: "conducta", titulo: "Cuántos hicieron la pausa según quién la propuso", tablero: true,
       subtitulo: "Porcentaje de los presentes, las tres semanas juntas",
       etiquetas: ["La propuso el profesor", "La propuso el delegado", "No la propuso nadie"],
       valores: [68, 28, 18], sufijo: " %",
@@ -62,7 +63,7 @@ window.PANEL = {
       decision: "Conseguir que el profesor de S-22 la dirija: con él, la pausa casi se cuadruplica.",
       fuente: "datos/conteo.csv (141 de 206 con profesor, 17 de 61 con delegado, 15 de 85 sin nadie)" },
 
-    { tipo: "linea", capa: "primer paso", titulo: "Escaneos del código QR por lugar",
+    { tipo: "linea", capa: "primer paso", titulo: "Escaneos del código QR por lugar", tablero: true,
       ejeX: ["29/11", "06/12", "13/12"],
       series: [
         { nombre: "Biblioteca", valores: [17, 26, 31] },

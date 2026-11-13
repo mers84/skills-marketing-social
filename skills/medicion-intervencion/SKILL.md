@@ -62,7 +62,10 @@ Lee también `datos/conteo.csv`, `datos/escaneos.csv` y `datos/compromisos.csv`.
 
 ### 4. Crea el panel
 
-Es una página como un tablero de Looker Studio, con la marca de la UCAB: arriba la conducta y la meta, luego los números grandes y debajo los gráficos, cada uno con la decisión que permite tomar.
+Es una página con la marca de la UCAB y dos vistas, con los mismos datos:
+
+- **Tablero**, la que abre primero: ocupa una pantalla, sin desplazarse, para proyectarla o mirarla de un vistazo. Arriba los números grandes, debajo los dos o tres gráficos principales y al pie la conducta y la meta. Al tocar un recuadro se ve qué decidir.
+- **Informe**: la página completa, con todos los gráficos, cada uno con su decisión y su fuente, y lo que dicen los datos. Es la que se manda o se imprime.
 
 **No escribas la página: copia la plantilla y llena sus datos.**
 
@@ -79,9 +82,9 @@ Es una página como un tablero de Looker Studio, con la marca de la UCAB: arriba
    | Los pasos de ver la pieza a hacer la conducta | `embudo` | La vio, le interesó, dio un primer paso, la hizo |
    | El detalle fila por fila | `tabla` | El conteo de la última semana |
 
-   Pon de tres a cinco `kpi` y de tres a seis gráficos, al menos uno de conducta. Marca cada uno con su `capa` (conducta, primer paso, interés o vanidad), su `fuente` y su `decision`. No sumes el alcance de varias publicaciones (guía, «El panel»).
+   Pon de tres a cinco `kpi` y de tres a seis gráficos, al menos uno de conducta. Marca con `tablero: true` los dos o tres gráficos que van en la vista de tablero; los `kpi` van siempre. Marca cada uno con su `capa` (conducta, primer paso, interés o vanidad), su `fuente` y su `decision`. No sumes el alcance de varias publicaciones (guía, «El panel»).
 4. Si los datos son de ejemplo, deja `ficticio: true`: la página lo dice arriba, en amarillo.
-5. Saca `salidas/panel/panel.pdf` con el comando de «Sacar los PDF», en el paso 5, y pon `pdf: "panel.pdf"` en `datos.js`, para que la página muestre el botón «Descargar PDF».
+5. Saca `salidas/panel/panel.pdf`, que trae el tablero en la primera página y el informe detrás, con el comando de «Sacar los PDF», en el paso 5, y pon `pdf: "panel.pdf"` en `datos.js`, para que la página muestre el botón «Descargar PDF».
 
 Después, compara cada número del panel con el archivo de donde salió y pide al equipo que lo revise también.
 
